@@ -1,0 +1,50 @@
+<input class="toggle" type="checkbox" id="dark-mode-toggle" />
+
+<style is:inline>
+	.toggle {
+		background: transparent;
+		background-color: transparent;
+		cursor: pointer;
+		visibility: hidden;
+		height: 16px;
+		width: 16px;
+		position: relative;
+		z-index: 2;
+	}
+	.toggle::before,
+	.toggle::after {
+		content: "";
+		display: block;
+		transition: 0.2s all ease-in-out;
+		visibility: visible;
+	}
+	.toggle::before {
+		background: transparent;
+		border: 1px solid var(--clr-text);
+		height: inherit;
+		width: inherit;
+	}
+	.toggle::after {
+		background: var(--clr-text);
+		height: 16px;
+		width: 8px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.toggle:checked::before {
+		background: var(--clr-bg);
+		border: 1px solid var(--clr-text);
+	}
+	.toggle:checked::after {
+		background: var(--clr-text);
+		left: 8px;
+	}
+</style>
+<style is:global>
+	body.darkmode {
+		--clr-bg: #1d1f20;
+		--clr-text: white;
+	}
+</style>

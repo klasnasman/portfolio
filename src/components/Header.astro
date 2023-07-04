@@ -1,0 +1,41 @@
+<header class="header">
+  <span class="header__logo">
+    <a href="/">Klas Näsman</a>
+  </span>
+  <nav>
+    <div>
+      <a class="nav__link" href="#section1">About</a>
+    </div>
+    <div>
+      <p class="nav__projects">Projects:</p>
+      <a class="nav__link" href="#section2">Selected</a>
+      <a class="nav__link" href="#section3">All</a>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", function () {
+  function handleIntersection(entries) {
+    entries.forEach((entry) => {
+      const targetId = entry.target.id;
+      const targetNavLink = document.querySelector(`a[href="#${targetId}"]`);
+
+      if (entry.isIntersecting) {
+        targetNavLink.classList.add("active");
+      } else {
+        targetNavLink.classList.remove("active");
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, {
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
+
+  const sections = document.querySelectorAll("[id^='section']");
+  sections.forEach((section) => observer.observe(section));
+  console.log(observer);
+});
+</script>

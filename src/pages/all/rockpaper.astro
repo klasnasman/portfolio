@@ -1,0 +1,58 @@
+---
+import Pill from "@components/Pill.astro";
+import Layout from "@layouts/Layout.astro";
+import * as post from "./rockpaperMD.md";
+const photos = await Astro.glob("../../../public/images/all/rockpaper/*");
+---
+
+<Layout title={post.frontmatter.project}>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {
+        photos.map(({ default: photo }) => (
+          <div class="swiper-slide">
+            <div class="swiper-img-wrap">
+              <img src={photo} alt="" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-footer">
+      <div class="swiper-title">
+        <button class="btn btn__info">(info)</button>
+        <div>{post.frontmatter.project}</div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="project__wrap">
+      <div class="project__text flow">
+        <span>
+          <p>{post.frontmatter.project}</p>
+          <p>
+            {post.frontmatter.type}, {post.frontmatter.year}
+          </p>
+          <p>
+            <a href={post.frontmatter.link}>
+              {post.frontmatter.link}
+            </a>
+          </p>
+        </span>
+        <p set:html={post.compiledContent()} />
+        <div class="pills">
+          {post.frontmatter.tags.map((tag) => <Pill>{tag}</Pill>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<script>
+  import "@assets/js/swiper.js";
+</script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>

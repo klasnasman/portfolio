@@ -1,0 +1,34 @@
+---
+import Pill from "@components/Pill.astro";
+const allWork = await Astro.glob("../pages/selected/*.md");
+---
+
+{
+  allWork.map((work) => (
+    <>
+      <section class="index__section" id="selected">
+        <div class="index__img">
+          <a href={work.frontmatter.href}>
+            <figure>
+              <img class="lazy__load" src={work.frontmatter.thumb} />
+            </figure>
+            <span class="index__title">
+              <div>{work.frontmatter.project}</div>
+              <div>{work.frontmatter.type}</div>
+            </span>
+          </a>
+        </div>
+        <span class="index__heading flow">
+          <h3>{work.frontmatter.project}</h3>
+          <p set:html={work.frontmatter.info} />{" "}
+          <div class="pills">
+            {work.frontmatter.tags.map((tag) => (
+              <Pill>{tag}</Pill>
+            ))}
+          </div>
+        </span>
+      </section>
+    </>
+  ))
+}
+<style></style>

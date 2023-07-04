@@ -1,0 +1,40 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Pill from "@components/Pill.astro";
+import About from "@components/About.astro";
+import All from "@components/All.astro";
+import Footer from "@components/Footer.astro";
+const allWork = await Astro.glob("../pages/selected/*.md");
+---
+
+<Layout title="Projects: Selected">
+  <About />
+  <div id="section2" class="index__wrap">
+    {
+      allWork.map((work) => (
+        <>
+          <section class="index__section">
+            <div class="index__img">
+              <a href={work.frontmatter.link}>
+                <figure>
+                  <img class="lazy__load" src={work.frontmatter.thumb} />
+                </figure>
+              </a>
+            </div>
+            <span class="index__heading flow">
+              <h3>{work.frontmatter.project}</h3>
+              <p set:html={work.frontmatter.info} />{" "}
+              <div class="pills">
+                {work.frontmatter.tags.map((tag) => (
+                  <Pill>{tag}</Pill>
+                ))}
+              </div>
+            </span>
+          </section>
+        </>
+      ))
+    }
+  </div>
+  <All />
+  <Footer />
+</Layout>

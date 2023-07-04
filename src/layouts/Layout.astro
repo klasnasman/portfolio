@@ -1,0 +1,71 @@
+---
+import Header from "../components/Header.astro";
+import Transitions from "../components/Transitions";
+import "../styles/import.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="theme-color" content="#f1f1f0" />
+  </head>
+  <body>
+    <main class="main">
+      <Header />
+      <Transitions client:load>
+        <slot />
+      </Transitions>
+    </main>
+    <script>
+      import "/src/assets/js/index.js";
+    </script>
+  </body>
+</html>
+
+<script is:inline>
+let darkMode = localStorage.getItem("darkMode");
+
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+const enableDarkMode = () => {
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("darkmode");
+  localStorage.removeItem("darkMode");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode();
+}
+
+if (darkModeToggle) {
+  darkModeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkMode");
+
+    if (darkMode !== "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
+}
+</script>

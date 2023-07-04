@@ -1,0 +1,45 @@
+---
+const allWork = await Astro.glob("../pages/all/*.md*");
+---
+
+<section id="section3" class="all__wrap">
+  <table class="table__wrap">
+    <thead>
+      <tr class="row">
+        <th class="td project" role="columnheader"><span>Project</span></th>
+        <th class="td type" role="columnheader"><span>Type</span></th>
+        <th class="td tags" role="columnheader"><span>Tags</span></th>
+        <th class="td year" role="columnheader"><span>Year</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        allWork.map((work) => (
+          <>
+            <tr class="table__item">
+              <td class="td project">
+                <a href={work.frontmatter.link}>{work.frontmatter.project}</a>
+              </td>
+              <td class="td type">
+                {" "}
+                <a href={work.frontmatter.link}>{work.frontmatter.type}</a>
+              </td>
+              <td class="td tags">
+                {" "}
+                <a href={work.frontmatter.link}>
+                  {work.frontmatter.tags.join(", ")}
+                </a>
+              </td>
+              <td class="td year">
+                <a href={work.frontmatter.link}>{work.frontmatter.year}</a>
+              </td>
+            </tr>
+          </>
+        ))
+      }
+    </tbody>
+  </table>
+</section>
+<script>
+  import "@assets/js/tableSort.js";
+</script>
