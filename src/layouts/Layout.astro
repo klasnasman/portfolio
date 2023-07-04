@@ -33,7 +33,7 @@ const { title } = Astro.props;
       </Transitions>
     </main>
     <script>
-      import "/src/assets/js/index.js";
+      import "/src/assets/js/lazy.js";
     </script>
   </body>
 </html>
@@ -41,7 +41,7 @@ const { title } = Astro.props;
 <script is:inline>
 let darkMode = localStorage.getItem("darkMode");
 
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const darkModeToggle = document.querySelector("#dark__toggle");
 
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
