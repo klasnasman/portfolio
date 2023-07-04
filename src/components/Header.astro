@@ -15,8 +15,8 @@
 </header>
 
 <script is:inline>
-document.addEventListener("DOMContentLoaded", function () {
-  function handleIntersection(entries) {
+document.addEventListener("DOMContentLoaded", () => {
+  const handleIntersection = (entries) => {
     entries.forEach((entry) => {
       const targetId = entry.target.id;
       const targetNavLink = document.querySelector(`a[href="#${targetId}"]`);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         targetNavLink.classList.remove("active");
       }
     });
-  }
+  };
 
   const observer = new IntersectionObserver(handleIntersection, {
     rootMargin: "0px",
@@ -36,6 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const sections = document.querySelectorAll("[id^='section']");
   sections.forEach((section) => observer.observe(section));
-  console.log(observer);
 });
 </script>
