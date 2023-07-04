@@ -6,8 +6,8 @@ tags:
   - Javascript
   - Astro
   - CSS
-link: https://klasnasman-portfolio.netlify.com/
+link: https://klasnasman.netlify.com/
 year: 2023
 thumb: /images/all/website03/website03.jpg
-info: Wedding Photography
+info: My portfolio
 ---
