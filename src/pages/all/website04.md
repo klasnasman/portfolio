@@ -1,5 +1,5 @@
 ---
-project: This site
+project: My portfolio
 type: Personal
 tags:
   - Design
