@@ -4,12 +4,12 @@
   </span>
   <nav>
     <div>
-      <a class="nav__link" href="#section1">About</a>
+      <a class="nav-link" href="#about">About</a>
     </div>
     <div>
       <p class="nav__projects">Projects:</p>
-      <a class="nav__link" href="#section2">Selected</a>
-      <a class="nav__link" href="#section3">All</a>
+      <a class="nav-link" href="#selected">Selected</a>
+      <a class="nav-link" href="#all">All</a>
     </div>
   </nav>
 </header>
@@ -29,12 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const observer = new IntersectionObserver(handleIntersection, {
-    rootMargin: "0px",
-    threshold: 0.5,
-  });
+  const setupObserver = () => {
+    const isMobile = window.innerWidth < 750;
+    const threshold = isMobile ? [0.2] : [0.5];
 
-  const sections = document.querySelectorAll("[id^='section']");
-  sections.forEach((section) => observer.observe(section));
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: "0px",
+      threshold: threshold,
+    });
+
+    const sections = document.querySelectorAll("#about, #selected, #all");
+    sections.forEach((section) => observer.observe(section));
+  };
+
+  setTimeout(setupObserver, 0);
 });
 </script>

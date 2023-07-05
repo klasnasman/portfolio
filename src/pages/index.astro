@@ -9,7 +9,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
 
 <Layout title="Klas Näsman">
   <About />
-  <div id="section2" class="index__wrap">
+  <section id="selected" class="index__wrap">
     {
       allWork.map((work) => (
         <>
@@ -34,7 +34,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
         </>
       ))
     }
-  </div>
+  </section>
   <All />
   <Footer />
 </Layout>
