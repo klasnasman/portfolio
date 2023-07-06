@@ -7,9 +7,12 @@ import ThemeToggle from "./ThemeToggle.astro";
         <div class="footer__toggle">
             <ThemeToggle />
         </div>
-        <div class="footer__social">länkar</div>
+        <div class="footer__social">
+            <img class="social__img" src="/images/github.png" alt="Github" />
+        </div>
     </div>
 </footer>
+
 <style>
     footer {
         display: flex;
@@ -22,5 +25,10 @@ import ThemeToggle from "./ThemeToggle.astro";
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+
+    img.social__img {
+        width: 28px;
+        height: 28px;
     }
 </style>

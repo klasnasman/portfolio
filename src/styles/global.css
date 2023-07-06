@@ -17,30 +17,20 @@ body {
   margin-top: var(--flow-space, 1em);
 }
 
-/* ACTIVE SECTION UNDERLINE */
-.active:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: var(--clr-text);
+
+/* lazy load images */
+.lazy__load {
+  opacity: 0;
+  transition: 0.8s ease-out;
+  transform: translateY(4%);
 }
 
-/* NAV HOVER ANIMATION */
-nav a:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 0%;
-  background-color: var(--clr-text);
-  transition: width 0.3s ease-in-out;
+.lazy__load-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-nav a:hover:after {
-  width: 100%;
-}
-
-/* TYPE */
+/* type */
 a {
   display: inline-block;
   color: var(--clr-text);
@@ -56,88 +46,40 @@ h3 {
   font-size: var(--step-2);
 }
 
-/* HEADER / NAV */
-header {
+
+/* about.astro */
+.about__wrap {
   display: flex;
-  position: fixed;
-  align-items: baseline;
-  justify-content: space-between;
-  padding-top: var(--spacer-l);
-  padding-inline: 4rem;
-  width: 100%;
-  z-index: 10;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 0 2rem;
+  min-height: 100svh;
+  margin-inline: auto;
+  max-width: 80vw;
+}
+
+.about__span {
+  /* max-width: 30ch; */
+  font-family: var(--ff-logo);
+  font-size: var(--step-2);
+  padding-inline: var(--spacer-l);
+  text-wrap: balance;
+}
+
+img.about__img {
+  max-width: 150px;
+  border-radius: 1rem;
 }
 
 @media (width <=750px) {
-  header {
-    padding-inline: 1rem;
-  }
-}
-
-.header__logo {
-  font-size: var(--step-0);
-  text-transform: uppercase;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  gap: 4rem;
-  text-transform: uppercase;
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-@media (width <=750px) {
-  nav {
-    opacity: 1;
-    gap: var(--spacer-xs);
+  .about__wrap {
     flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .nav__projects {
-    display: none;
+    gap: 1rem 0rem;
   }
 }
 
-nav>div {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav__dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.nav__dropdown-links {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  min-width: 100%;
-  transition: all 0.4s;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.nav__dropdown-links a {
-  display: block;
-  color: black;
-  margin-block-start: 0.5rem;
-  text-decoration: none;
-}
-
-.nav__dropdown:hover .nav__dropdown-links {
-  opacity: 1;
-  visibility: visible;
-}
-
-.nav__dropdown-links a:hover {
-  opacity: 0.6;
-}
-
-/* INDEX.astro  */
+/* index.astro  */
 .index__wrap {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -218,55 +160,7 @@ nav>div {
   text-wrap: balance;
 }
 
-a:hover .index__title {
-  visibility: visible;
-  opacity: 1;
-}
-
-figure figcaption {
-  opacity: 0;
-  font-style: italic;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    -webkit-transform;
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform;
-  transition: transform, opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform, opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    -webkit-transform;
-}
-
-/* ABOUT.astro */
-.about__wrap {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  gap: 0 2rem;
-  min-height: 100svh;
-  margin-inline: auto;
-  max-width: 80vw;
-}
-
-.about__span {
-  /* max-width: 30ch; */
-  font-family: var(--ff-logo);
-  font-size: var(--step-2);
-  padding-inline: var(--spacer-l);
-  text-wrap: balance;
-}
-
-img.about__img {
-  max-width: 150px;
-  border-radius: 1rem;
-}
-
-@media (width <=750px) {
-  .about__wrap {
-    flex-direction: column;
-    gap: 1rem 0rem;
-  }
-}
-
-/* ALL PROJECTS TABLE */
+/* all.astro */
 .all__wrap {
   display: flex;
   place-items: center;
@@ -358,16 +252,4 @@ tr {
 
 tbody:hover tr:not(:hover) {
   opacity: 0.6;
-}
-
-/* LAZY LOAD IMAGES */
-.lazy__load {
-  opacity: 0;
-  transition: 0.8s ease-out;
-  transform: translateY(4%);
-}
-
-.lazy__load-active {
-  opacity: 1;
-  transform: translateY(0);
 }
