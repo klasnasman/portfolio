@@ -45,11 +45,13 @@ const darkModeToggle = document.querySelector("#theme__toggle");
 
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
+  darkModeToggle.checked = true;
   localStorage.setItem("darkMode", "enabled");
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
+  darkModeToggle.checked = false;
   localStorage.removeItem("darkMode");
 };
 
@@ -58,10 +60,8 @@ if (darkMode === "enabled") {
 }
 
 if (darkModeToggle) {
-  darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
-
-    if (darkMode !== "enabled") {
+  darkModeToggle.addEventListener("change", () => {
+    if (darkModeToggle.checked) {
       enableDarkMode();
     } else {
       disableDarkMode();
