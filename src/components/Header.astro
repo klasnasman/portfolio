@@ -12,78 +12,7 @@
   </nav>
 </header>
 
-<style>
-  header {
-    display: flex;
-    position: fixed;
-    align-items: baseline;
-    justify-content: space-between;
-    padding-top: var(--spacer-l);
-    padding-inline: 4rem;
-    width: 100%;
-    z-index: 10;
-  }
-
-  @media (width <=750px) {
-    header {
-      padding-inline: 1rem;
-    }
-  }
-
-  .header__logo {
-    font-size: var(--step-0);
-    text-transform: uppercase;
-  }
-
-  nav {
-    display: flex;
-    gap: 4rem;
-    text-transform: uppercase;
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  @media (width <=750px) {
-    nav {
-      opacity: 1;
-      gap: var(--spacer-xs);
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .nav__projects {
-      display: none;
-    }
-  }
-
-  nav > div {
-    display: flex;
-    gap: 1rem;
-  }
-
-  /* nav hover underline */
-  nav a:after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    background-color: var(--clr-text);
-    transition: width 0.3s ease-in-out;
-  }
-
-  nav a:hover:after {
-    width: 100%;
-  }
-
-  /* active section underline */
-  .active:after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: var(--clr-text);
-  }
-</style>
+<style></style>
 
 <script is:inline>
 document.addEventListener("DOMContentLoaded", () => {
