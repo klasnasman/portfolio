@@ -21,7 +21,7 @@ body {
 header {
   display: flex;
   position: fixed;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
   padding-top: var(--spacer-l);
   padding-inline: 4rem;
