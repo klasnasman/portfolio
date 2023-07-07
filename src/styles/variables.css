@@ -27,9 +27,3 @@
 
   --header-height: 4rem;
 }
-
-@media (max-width: 800px) {
-  :root {
-    --spacer-l: 1rem;
-  }
-}
