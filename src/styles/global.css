@@ -125,11 +125,11 @@ h3 {
   gap: 0 2rem;
   min-height: 100svh;
   margin-inline: auto;
-  max-width: 80vw;
+  max-width: 60vw;
 }
 
 .about__span {
-  /* max-width: 30ch; */
+  text-wrap: balance;
   font-family: var(--ff-logo);
   font-size: var(--step-2);
   padding-inline: var(--spacer-l);
@@ -147,6 +147,10 @@ h3 {
     gap: 1rem 0rem;
     max-width: 100%;
     padding-block-start: var(--header-height);
+  }
+
+  .about__span {
+    text-wrap: unset;
   }
 }
 
