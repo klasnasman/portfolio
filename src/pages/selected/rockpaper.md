@@ -2,7 +2,6 @@
 project: Rock Paper Scissors
 type: School Project
 tags:
-  - Design
   - React
   - Cypress
   - CSS

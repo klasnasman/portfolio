@@ -2,7 +2,6 @@
 project: Website 01
 type: Personal
 tags:
-  - Design
   - Javascript
   - Astro
   - CSS

@@ -2,7 +2,6 @@
 project: My portfolio
 type: Personal
 tags:
-  - Design
   - Javascript
   - Astro
   - CSS

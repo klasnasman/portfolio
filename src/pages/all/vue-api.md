@@ -2,8 +2,7 @@
 project: VUE API
 type: Internship Assignment
 tags:
-  - Design
-  - VUE
+  - Vue
   - CSS
 link: https://klasnasman-api-vue.netlify.app/
 year: 2023

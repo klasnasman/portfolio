@@ -2,7 +2,6 @@
 project: To Do App
 type: School Project
 tags:
-  - Design
   - Javascript
   - CSS
 link: https://github.com/klasnasman/todo
