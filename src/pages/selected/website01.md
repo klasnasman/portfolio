@@ -8,5 +8,5 @@ tags:
 link: https://klasnasman-astro.netlify.app/
 year: 2023
 thumb: /images/all/website01/website01.jpg
-info: I designed and developed this website with Astro framework and vanilla JS.
+info: I designed and developed this website using Astro framework and Javascript.
 ---
