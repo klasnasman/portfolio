@@ -3,31 +3,52 @@ import Pill from "@components/Pill.astro";
 const allWork = await Astro.glob("../pages/selected/*.md");
 ---
 
-{
-  allWork.map((work) => (
-    <>
-      <section class="index__section" id="selected">
-        <div class="index__img">
-          <a href={work.frontmatter.href}>
-            <figure>
-              <img class="lazy__load" src={work.frontmatter.thumb} />
-            </figure>
-            <span class="index__title">
-              <div>{work.frontmatter.project}</div>
-              <div>{work.frontmatter.type}</div>
-            </span>
-          </a>
-        </div>
-        <span class="index__heading flow">
-          <h3>{work.frontmatter.project}</h3>
-          <p set:html={work.frontmatter.info} />{" "}
-          <div class="pills">
-            {work.frontmatter.tags.map((tag) => (
-              <Pill>{tag}</Pill>
-            ))}
+<section id="selected" class="index__wrap">
+  {
+    allWork.map((work) => (
+      <>
+        <section class="index__section">
+          <div class="index__img">
+            <a href={work.frontmatter.link}>
+              <figure>
+                <img class="lazy__load" src={work.frontmatter.thumb} />
+              </figure>
+            </a>
           </div>
-        </span>
-      </section>
-    </>
-  ))
-}
+          <span class="index__heading flow">
+            <h3>{work.frontmatter.project}</h3>
+            <p set:html={work.frontmatter.info} />{" "}
+            <div class="tech">
+              <div>
+                {work.frontmatter.tags.map((tag) => (
+                  <Pill>{tag}</Pill>
+                ))}
+              </div>
+              <div class="links">
+                <a class="link" href={work.frontmatter.link} />
+              </div>
+            </div>
+          </span>
+        </section>
+      </>
+    ))
+  }
+</section>
+
+<style>
+  .tech {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacer-s);
+  }
+
+  .link::before {
+    content: "\2192";
+    display: inline-block;
+    transform: scale(1.5) rotate(-45deg);
+  }
+
+  .links {
+    display: flex;
+  }
+</style>

@@ -1,20 +1,13 @@
 <div class="pill"><slot /></div>
 
-<style is:inline>
-    .pill {
-        display: inline-block;
-        border: 1px solid var(--clr-text);
-        border-radius: 2px;
-        padding-inline: var(--spacer-s);
-        text-transform: lowercase;
-        box-shadow: 2px 2px var(--clr-text);
-        transition: all 0.1s;
-    }
-</style>
-<style is:global>
-    .pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
+<style>
+  .pill {
+    display: inline-block;
+    border: 1px solid var(--clr-text);
+    border-radius: 2px;
+    padding-inline: var(--spacer-s);
+    text-transform: lowercase;
+    box-shadow: 2px 2px var(--clr-text);
+    transition: all 0.1s;
+  }
 </style>
