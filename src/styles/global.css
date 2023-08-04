@@ -251,12 +251,6 @@ h3 {
   border-collapse: collapse;
 }
 
-@media only screen and (width <=750px) {
-  .table__wrap {
-    padding-inline: 1rem;
-  }
-}
-
 .table__wrap,
 .table__wrap tbody,
 .table__wrap thead {
