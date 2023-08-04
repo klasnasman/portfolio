@@ -20,8 +20,8 @@ const allWork = await Astro.glob("../pages/selected/*.md");
             <p set:html={work.frontmatter.info} />{" "}
             <div class="tech">
               <div class="pills">
-                {work.frontmatter.tags.map((tag) => (
-                  <Pill>{tag}</Pill>
+                {work.frontmatter.tags.sort().map((tag) => (
+                  <Pill key={tag}>{tag}</Pill>
                 ))}
               </div>
               <div>
