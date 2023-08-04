@@ -249,7 +249,6 @@ h3 {
 .table__wrap {
   flex: 1;
   border-collapse: collapse;
-  padding-inline: 2rem;
 }
 
 @media only screen and (width <=750px) {
@@ -283,7 +282,8 @@ h3 {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px dashed var(--clr-text);
-  padding: 0.5rem 0;
+  padding-block: 0.5rem;
+  padding-inline: var(--spacer-l);
   width: 100%;
 }
 
@@ -296,6 +296,7 @@ h3 {
   .table__wrap tr {
     display: flex;
     justify-content: space-between;
+    padding-inline: var(--spacer-m);
   }
 }
 
