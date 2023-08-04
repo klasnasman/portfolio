@@ -27,7 +27,7 @@ const allWork = await Astro.glob("../pages/all/*.md*");
               <td class="td tags">
                 {" "}
                 <a href={work.frontmatter.link}>
-                  {work.frontmatter.tags.join(", ")}
+                  {work.frontmatter.tags.slice().sort().join(", ")}
                 </a>
               </td>
               <td class="td year">
