@@ -24,7 +24,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
                   <Pill>{tag}</Pill>
                 ))}
               </div>
-              <div class="links">
+              <div>
                 <a class="link" href={work.frontmatter.link} />
               </div>
             </div>
@@ -46,9 +46,5 @@ const allWork = await Astro.glob("../pages/selected/*.md");
     content: "\2192";
     display: inline-block;
     transform: scale(1.5) rotate(-45deg);
-  }
-
-  .links {
-    display: flex;
   }
 </style>
