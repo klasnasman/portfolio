@@ -151,6 +151,7 @@ h3 {
 
   .about__span {
     text-wrap: unset;
+    padding-inline: var(--spacer-m);
   }
 }
 
@@ -190,6 +191,7 @@ h3 {
 @media (width <=750px) {
   .index__wrap>section {
     justify-content: center;
+    padding-inline: var(--spacer-m);
     gap: 1rem 0rem;
     margin-block-end: 12rem;
   }
