@@ -17,7 +17,35 @@ body {
   margin-top: var(--flow-space, 1em);
 }
 
-/* header */
+/* lazy load images */
+.lazy__load {
+  opacity: 0;
+  transition: 0.8s ease-out;
+  transform: translateY(4%);
+}
+
+.lazy__load-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* type */
+a {
+  display: inline-block;
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+p {
+  color: var(--clr-text);
+}
+
+h3 {
+  font-family: var(--ff-logo);
+  font-size: var(--step-1);
+}
+
+/* header.astro */
 header {
   display: flex;
   position: fixed;
@@ -86,35 +114,6 @@ nav a:hover:after {
   width: 100%;
   background-color: var(--clr-text);
 }
-
-/* lazy load images */
-.lazy__load {
-  opacity: 0;
-  transition: 0.8s ease-out;
-  transform: translateY(4%);
-}
-
-.lazy__load-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* type */
-a {
-  display: inline-block;
-  color: var(--clr-text);
-  text-decoration: none;
-}
-
-p {
-  color: var(--clr-text);
-}
-
-h3 {
-  font-family: var(--ff-logo);
-  font-size: var(--step-1);
-}
-
 
 /* about.astro */
 #about {
