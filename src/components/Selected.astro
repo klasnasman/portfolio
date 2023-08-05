@@ -3,19 +3,19 @@ import Pill from "@components/Pill.astro";
 const allWork = await Astro.glob("../pages/selected/*.md");
 ---
 
-<section id="selected" class="index__wrap">
+<section id="selected">
   {
     allWork.map((work) => (
       <>
-        <section class="index__section">
-          <div class="index__img">
+        <section class="select__section">
+          <div class="select__img">
             <a href={work.frontmatter.link}>
               <figure>
                 <img class="lazy__load" src={work.frontmatter.thumb} />
               </figure>
             </a>
           </div>
-          <span class="index__heading flow">
+          <span class="select__heading flow">
             <h3>{work.frontmatter.project}</h3>
             <p set:html={work.frontmatter.info} />{" "}
             <div class="tech">
@@ -34,23 +34,3 @@ const allWork = await Astro.glob("../pages/selected/*.md");
     ))
   }
 </section>
-
-<style>
-  .tech {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacer-s);
-  }
-
-  .pills {
-    display: flex;
-    gap: var(--spacer-s);
-  }
-
-  .link::before {
-    content: "\2192";
-    display: inline-block;
-    transform: scale(1.5) rotate(-45deg);
-  }
-</style>

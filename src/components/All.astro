@@ -2,7 +2,7 @@
 const allWork = await Astro.glob("../pages/all/*.md*");
 ---
 
-<section id="all" class="all__wrap">
+<section id="all">
   <table class="table__wrap">
     <thead>
       <tr class="row">
@@ -40,6 +40,3 @@ const allWork = await Astro.glob("../pages/all/*.md*");
     </tbody>
   </table>
 </section>
-<script>
-  import "@assets/js/tableSort.js";
-</script>

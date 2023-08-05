@@ -33,11 +33,14 @@ const { title } = Astro.props;
       </Transitions>
     </main>
     <script>
+      import "/src/assets/js/sectionObserver.js";
       import "/src/assets/js/lazy.js";
+      import "@assets/js/tableSort.js";
     </script>
   </body>
 </html>
 
+/* is:inline to prevent FOUC */
 <script is:inline>
 let darkMode = localStorage.getItem("darkMode");
 
