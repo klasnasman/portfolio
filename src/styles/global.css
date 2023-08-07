@@ -229,15 +229,8 @@ nav a:hover:after {
 }
 
 .select__heading {
-  max-width: 68ch;
+  width: 100%;
   margin-top: var(--spacer-s);
-  text-wrap: balance;
-}
-
-@media (width <=750px) {
-  .select__heading {
-    max-width: unset;
-  }
 }
 
 .tech {
