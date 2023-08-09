@@ -9,8 +9,8 @@
   /* Step 3: 25.00px → 31.25px */
   --step-3: clamp(1.56rem, calc(1.43rem + 0.68vw), 1.95rem);
 
-  --ff-body: "Inconsolata", "Domaine Sans Text", "Bergen Mono", "Verdana", serif;
-  --ff-logo: "Domaine Sans Text", "Prophet";
+  --ff-body: "Domaine Sans Text", "Inconsolata", "Bergen Mono", "Verdana", serif;
+  --ff-logo: "Brown", "Futura", "Verdana", "Prophet", sans-serif;
 
   --fw-light: 300;
   --fw-regular: 400;
