@@ -136,7 +136,7 @@ nav a:hover:after {
 
 .about__img {
   border: 1px solid;
-  border-radius: 1px;
+  border-radius: 2px;
   width: max(100px, 12vw);
   filter: grayscale(1);
 }
