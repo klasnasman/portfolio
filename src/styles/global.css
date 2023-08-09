@@ -14,7 +14,7 @@ body {
 }
 
 .flow>*+* {
-  margin-top: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 0.7em);
 }
 
 /* lazy load images */
@@ -51,6 +51,7 @@ header {
   position: fixed;
   align-items: flex-end;
   justify-content: space-between;
+  font-family: var(--ff-logo);
   padding-top: var(--spacer-l);
   padding-inline: 6rem;
   width: 100%;
@@ -129,7 +130,6 @@ nav a:hover:after {
 
 .about__span {
   text-wrap: balance;
-  font-family: var(--ff-logo);
   font-size: var(--step-1);
   padding-inline: var(--spacer-l);
 }
@@ -262,6 +262,7 @@ nav a:hover:after {
 .table__wrap {
   flex: 1;
   border-collapse: collapse;
+  font-family: var(--ff-logo);
 }
 
 .table__wrap,

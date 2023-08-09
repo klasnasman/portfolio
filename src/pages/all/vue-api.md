@@ -1,9 +1,10 @@
 ---
-project: VUE API
+project: Vue API
 type: Internship Assignment
 tags:
   - Vue
   - CSS
+  - API
 link: https://klasnasman-api-vue.netlify.app/
 year: 2023
 thumb: /images/all/rockpaper/rockpaper.jpg
