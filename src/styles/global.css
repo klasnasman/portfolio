@@ -157,6 +157,7 @@ nav a:hover:after {
 /* selected.astro  */
 #selected {
   display: grid;
+  gap: 2rem 0rem;
   grid-template-columns: repeat(3, minmax(240px, 1fr));
 }
 
@@ -175,10 +176,10 @@ nav a:hover:after {
   padding-inline: var(--spacer-l);
 }
 
-#selected>section:nth-of-type(even) {
+/* #selected>section:nth-of-type(even) {
   border-left: 1px dashed var(--clr-text);
   border-right: 1px dashed var(--clr-text);
-}
+} */
 
 @media (width <=750px) {
   #selected>section:nth-of-type(even) {
