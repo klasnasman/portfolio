@@ -157,7 +157,7 @@ nav a:hover:after {
 /* selected.astro  */
 #selected {
   display: grid;
-  gap: 2rem 0rem;
+  gap: 4rem 0rem;
   grid-template-columns: repeat(3, minmax(240px, 1fr));
 }
 
