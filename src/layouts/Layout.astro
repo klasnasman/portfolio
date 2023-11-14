@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+const canonicalURL = (Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -15,14 +16,15 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Klas Näsman is a designer and web developer based in Stockholm, Sweden" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
+    <meta property="og:title" content="Klas Näsman" />
+    <meta property="og:type" content="Website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="theme-color" content="#f1f1f0" />
   </head>
   <body>
@@ -41,33 +43,33 @@ const { title } = Astro.props;
 </html>
 
 <script is:inline>
-let darkMode = localStorage.getItem("darkMode");
+  let darkMode = localStorage.getItem("darkMode");
 
-const darkModeToggle = document.querySelector("#theme__toggle");
+  const darkModeToggle = document.querySelector("#theme__toggle");
 
-const enableDarkMode = () => {
-  document.body.classList.add("darkmode");
-  darkModeToggle.checked = true;
-  localStorage.setItem("darkMode", "enabled");
-};
+  const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    darkModeToggle.checked = true;
+    localStorage.setItem("darkMode", "enabled");
+  };
 
-const disableDarkMode = () => {
-  document.body.classList.remove("darkmode");
-  darkModeToggle.checked = false;
-  localStorage.removeItem("darkMode");
-};
+  const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    darkModeToggle.checked = false;
+    localStorage.removeItem("darkMode");
+  };
 
-if (darkMode === "enabled") {
-  enableDarkMode();
-}
+  if (darkMode === "enabled") {
+    enableDarkMode();
+  }
 
-if (darkModeToggle) {
-  darkModeToggle.addEventListener("change", () => {
-    if (darkModeToggle.checked) {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
-  });
-}
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("change", () => {
+      if (darkModeToggle.checked) {
+        enableDarkMode();
+      } else {
+        disableDarkMode();
+      }
+    });
+  }
 </script>
