@@ -2,7 +2,6 @@
 import Pill from "@components/Pill.astro";
 
 const allWork = await Astro.glob("../pages/selected/*.md");
-allWork.sort((a, b) => b - a);
 ---
 
 <section id="selected">
