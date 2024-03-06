@@ -141,6 +141,10 @@ nav a:hover:after {
   filter: grayscale(1);
 }
 
+.about__img:hover {
+  filter: grayscale(0);
+}
+
 @media (width <=750px) {
   #about {
     flex-direction: column;
