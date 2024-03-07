@@ -60,7 +60,7 @@ h3 {
 header {
   display: flex;
   position: fixed;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   padding-top: var(--spacer-m);
   padding-inline: 6rem;
