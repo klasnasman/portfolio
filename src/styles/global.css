@@ -43,7 +43,6 @@ p {
 h3 {
   font-family: var(--ff-logo);
   font-size: var(--step-0);
-  text-transform: uppercase;
 }
 
 .link {
@@ -76,14 +75,9 @@ header {
   }
 }
 
-.header__logo {
-  text-transform: uppercase;
-}
-
 nav {
   display: flex;
   gap: 4rem;
-  text-transform: uppercase;
   transition: opacity 0.3s;
 }
 
