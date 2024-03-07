@@ -221,7 +221,8 @@ nav a:hover {
 .select__heading {
   display: flex;
   justify-content: space-between;
-  margin-block: var(--spacer-xs);
+  margin-block-start: var(--spacer-xs);
+  margin-block-end: var(--spacer-s);
 }
 
 /* all.astro */
