@@ -131,7 +131,6 @@ nav a:hover {
 
 .about__span {
   text-wrap: balance;
-  font-size: var(--step-1);
   padding-inline: var(--spacer-l);
 }
 
