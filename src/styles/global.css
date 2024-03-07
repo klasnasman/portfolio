@@ -249,6 +249,7 @@ nav a:hover:after {
   flex: 1;
   border-collapse: collapse;
   font-family: var(--ff-logo);
+  padding-inline: 1rem;
 }
 
 .table__wrap,
@@ -277,7 +278,6 @@ nav a:hover:after {
   justify-content: space-between;
   border-bottom: 1px dashed var(--clr-text);
   padding-block: 0.5rem;
-  padding-inline: var(--spacer-l);
   width: 100%;
 }
 
@@ -289,7 +289,6 @@ nav a:hover:after {
   .table__wrap tr {
     display: flex;
     justify-content: space-between;
-    padding-inline: var(--spacer-m);
   }
 }
 
@@ -332,7 +331,7 @@ footer {
   display: flex;
   position: sticky;
   bottom: calc(var(--spacer-m) * 2);
-  margin-inline: var(--spacer-l);
+  margin-inline: var(--spacer-m);
 }
 
 .footer__wrap {
