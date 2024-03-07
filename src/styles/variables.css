@@ -1,8 +1,8 @@
 :root {
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  /* Step 0: 12.8px → 16px */
-  --step-0: clamp(0.8rem, 0.7304rem + 0.3478vi, 1rem);
-  /* Step 1: 16.00px → 20.00px */
+  /* 12.8px → 13.6px */
+  --step-0: clamp(0.8rem, 0.7857rem + 0.0714vi, 0.85rem);
+  /* 16.00px → 20.00px */
   --step-1: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
 
   --ff-body: "Necto Mono", "Inconsolata", "Bergen Mono", "Courier New", monospace;
