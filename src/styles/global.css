@@ -62,8 +62,7 @@ header {
   position: fixed;
   align-items: flex-end;
   justify-content: space-between;
-  font-family: var(--ff-logo);
-  padding-top: var(--spacer-l);
+  padding-top: var(--spacer-m);
   padding-inline: 6rem;
   width: 100%;
   z-index: 10;
