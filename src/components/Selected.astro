@@ -17,10 +17,12 @@ const allWork = await Astro.glob("../pages/selected/*.md");
           </div>
           <div class="select__info">
             <div class="select__heading">
+              <div>
                <h3>{work.frontmatter.project}</h3>
-
+              </div>
+              <div>
                <h3>{work.frontmatter.type}</h3>
-
+              </div>
            </div>
           </div>
             <p set:html={work.frontmatter.info} />
