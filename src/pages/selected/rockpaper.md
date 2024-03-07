@@ -8,5 +8,5 @@ tags:
 link: https://rockpapersax.netlify.com
 year: 2023
 thumb: /images/all/rockpaper/rockpaper.png
-info: I worked with my classmates on developing a Rock Paper Scissors app that was intended for testing in Cypress.
+info: I worked with my classmates on developing a Rock Paper Scissors app using React intended for testing in Cypress.
 ---
