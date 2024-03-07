@@ -46,6 +46,11 @@ h3 {
   text-transform: uppercase;
 }
 
+.link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* header.astro */
 header {
   display: flex;
