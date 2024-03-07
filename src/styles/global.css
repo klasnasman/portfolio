@@ -229,21 +229,6 @@ nav a:hover:after {
   margin-block: var(--spacer-xs);
 }
 
-.select__tags {
-  display: flex;
-}
-
-.pills {
-  display: flex;
-  gap: var(--spacer-s);
-}
-
-.link::before {
-  content: "\2192";
-  display: inline-block;
-  transform: scale(1.5) rotate(-45deg);
-}
-
 /* all.astro */
 #all {
   display: flex;
