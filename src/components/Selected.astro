@@ -22,7 +22,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
             <div class="tech">
               <div class="pills">
                 {work.frontmatter.tags.sort().map((tag) => (
-                  <Pill>{tag}</Pill>
+                  <p>{tag}</p>
                 ))}
               </div>
               <div>
