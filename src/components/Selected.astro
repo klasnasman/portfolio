@@ -25,6 +25,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
               </div>
            </div>
             <p set:html={work.frontmatter.info} />
+            <p set:html={work.compiledContent()} />
             </div>
            </section>
     ))
