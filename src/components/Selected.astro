@@ -24,9 +24,9 @@ const allWork = await Astro.glob("../pages/selected/*.md");
                <h3>{work.frontmatter.type}</h3>
               </div>
            </div>
-          </div>
             <p set:html={work.frontmatter.info} />
-        </section>
+            </div>
+           </section>
     ))
   }
 </section>
