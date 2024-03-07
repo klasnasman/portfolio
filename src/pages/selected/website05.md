@@ -8,5 +8,5 @@ tags:
 link: https://arkitektbyra.netlify.app/
 year: 2023
 thumb: /images/all/website05/05.png
-info: Website for a fictional architectural firm
+info: Developed a website for a fictional architectural firm using Astro.
 ---
