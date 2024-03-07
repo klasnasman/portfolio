@@ -197,7 +197,6 @@ nav a:hover:after {
   #selected>section {
     justify-content: center;
     padding-inline: var(--spacer-m);
-    gap: 0.5rem 0rem;
     margin-block-end: 12rem;
   }
 }
