@@ -7,7 +7,6 @@ const allWork = await Astro.glob("../pages/selected/*.md");
 <section id="selected">
   {
     allWork.map((work) => (
-      <>
         <section class="select__section">
           <div class="select__img">
             <a href={work.frontmatter.link}>
@@ -19,8 +18,10 @@ const allWork = await Astro.glob("../pages/selected/*.md");
           <div class="select__info">
           <div class="select__heading">
             <h3>{work.frontmatter.project}</h3>
+          <div class="select__tags">
                  {work.frontmatter.tags.sort().map((tag) => (
                   <p>{tag}</p>))}
+             </div>
              </div>
             <p set:html={work.frontmatter.info} />{" "}
               <div>
@@ -29,7 +30,6 @@ const allWork = await Astro.glob("../pages/selected/*.md");
             </div>
           </span>
         </section>
-      </>
     ))
   }
 </section>
