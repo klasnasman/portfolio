@@ -16,18 +16,15 @@ const allWork = await Astro.glob("../pages/selected/*.md");
             </a>
           </div>
           <div class="select__info">
-          <div class="select__heading">
-            <h3>{work.frontmatter.project}</h3>
-          <div class="select__tags">
-                 {work.frontmatter.tags.sort().map((tag) => (
-                  <p>{tag}</p>))}
+            <div class="select__heading">
+               <h3>{work.frontmatter.project}</h3>
+             <div class="select__tags">
+               {work.frontmatter.tags.sort().map((tag) => (
+               <p>{tag}</p>))}
              </div>
-             </div>
-            <p set:html={work.frontmatter.info} />{" "}
-              <div>
-                <a class="link" href={work.frontmatter.link} />
-              </div>
-            </div>
+           </div>
+          </div>
+            <p set:html={work.frontmatter.info} />
         </section>
     ))
   }
