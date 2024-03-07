@@ -18,10 +18,9 @@ const allWork = await Astro.glob("../pages/selected/*.md");
           <div class="select__info">
             <div class="select__heading">
                <h3>{work.frontmatter.project}</h3>
-             <div class="select__tags">
-               {work.frontmatter.tags.sort().map((tag) => (
-               <p>{tag}</p>))}
-             </div>
+
+               <h3>{work.frontmatter.type}</h3>
+
            </div>
           </div>
             <p set:html={work.frontmatter.info} />
