@@ -49,7 +49,7 @@ h3 {
 .link {
     text-decoration: underline;
     text-underline-offset: 2px;
-    text-decoration-color: black;
+    text-decoration-color: var(--clr-text);
     transition: text-decoration-color 0.3s;
 }
 
@@ -105,26 +105,22 @@ nav>div {
 }
 
 /* nav hover underline */
-nav a:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 0%;
-  background-color: var(--clr-text);
-  transition: width 0.3s ease-in-out;
+nav a {
+  text-decoration-color: transparent;
 }
 
-nav a:hover:after {
-  width: 100%;
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--clr-text);
+  transition: text-decoration-color 0.3s;
 }
 
 /* active section underline */
-.active:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: var(--clr-text);
+.active {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--clr-text);
 }
 
 /* about.astro */
