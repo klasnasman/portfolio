@@ -12,12 +12,12 @@
 }
 
 @font-face {
-  font-family: "Inconsolata";
-  src: url("https://files.cargocollective.com/c169834/Inconsolata-Regular.woff2") format("woff2"),
-    url("https://files.cargocollective.com/c169834/Inconsolata-Regular.woff") format("woff");
+  font-family: 'Necto Mono';
+  src: url('/fonts/NectoMono-Regular.woff2') format('woff2'),
+    url('/fonts/NectoMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
