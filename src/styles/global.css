@@ -214,11 +214,14 @@ nav a:hover:after {
   }
 }
 
+.select__info {
+  width: 100%;
+}
+
 .select__heading {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-block-start: var(--spacer-xs);
+  margin-block: var(--spacer-xs);
 }
 
 .select__tags {
