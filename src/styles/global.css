@@ -61,7 +61,7 @@ header {
 
 @media (width <=750px) {
   header {
-    padding-inline: var(--spacer-l);
+    padding-inline: var(--spacer-m);
   }
 }
 
