@@ -205,6 +205,11 @@ nav a:hover {
   object-fit: fill;
   border-radius: 2px;
   box-shadow: 0.25rem 0.25rem 0.75rem var(--box-shadow);
+  transition: outline 0.3s;
+}
+
+.select__img img:hover {
+    outline: 1px solid var(--clr-text);
 }
 
 @media (width <=750px) {
