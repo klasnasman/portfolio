@@ -281,9 +281,17 @@ nav a:hover {
 .table__wrap tr {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed var(--clr-text);
-  padding-block: 0.5rem;
+  padding-block: 0.25rem;
   width: 100%;
+}
+
+.table__wrap tr:first-child {
+  padding-block-start: 0.5rem;
+}
+
+tr.row {
+  border-bottom: 1px dashed;
+  padding-block: 0rem;
 }
 
 [role=columnheader] {
