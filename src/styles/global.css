@@ -290,12 +290,12 @@ nav a:hover {
 }
 
 tr.row {
-  border-bottom: 1px dashed;
   padding-block: 0rem;
 }
 
 [role=columnheader] {
-  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media only screen and (width <=750px) {
