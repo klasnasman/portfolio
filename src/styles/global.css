@@ -138,6 +138,7 @@ nav a:hover {
   border-radius: 2px;
   width: max(100px, 10vw);
   filter: grayscale(1);
+  transition: filter 0.4s;
 }
 
 .about__img:hover {
