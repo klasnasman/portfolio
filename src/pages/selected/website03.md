@@ -10,4 +10,4 @@ year: 2021
 thumb: /images/all/03.png
 ---
 
-I made this site to showcase my wedding photographs, made using Astro and a but if Javascript. 
+I created this site to display my wedding photographs, made using Astro along with some javascript.
