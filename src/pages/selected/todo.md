@@ -9,4 +9,4 @@ year: 2023
 thumb: /images/all/todo/todo.png
 ---
 
-I developed a Javascript To Do App for a school project.
+I developed a Javascript To Do App for a school project
