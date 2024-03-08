@@ -20,7 +20,7 @@ body {
 /* lazy load images */
 .lazy__load {
   opacity: 0;
-  transition: 0.8s ease-out;
+  transition: 0.6s ease-out;
   transform: translateY(4%);
 }
 
@@ -219,6 +219,7 @@ nav a:hover {
   object-fit: fill;
   border-radius: 2px;
   box-shadow: 0.25rem 0.25rem 0.75rem var(--box-shadow);
+  outline: 1px solid transparent;
 }
 
 .select__img img:hover {
