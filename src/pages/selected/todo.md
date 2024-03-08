@@ -9,4 +9,4 @@ year: 2023
 thumb: /images/all/todo.png
 ---
 
-For my first school project, I built the classic To-Do app using javascript, learning about CRUD.
+For my first school project, I built the classic To-Do app using Javascript, learning about CRUD.
