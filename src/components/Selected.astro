@@ -1,6 +1,5 @@
 ---
-import Pill from "@components/Pill.astro";
-
+import { Image } from "astro:assets";
 const allWork = await Astro.glob("../pages/selected/*.md");
 ---
 
@@ -11,7 +10,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
           <div class="select__img">
             <a href={work.frontmatter.link}>
               <figure>
-                <img class="lazy__load" src={work.frontmatter.thumb} />
+                <Image class="lazy__load" src={work.frontmatter.thumb} alt="Project thumbnail"/>
               </figure>
             </a>
           </div>
