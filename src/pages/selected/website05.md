@@ -10,4 +10,4 @@ year: 2023
 thumb: /images/all/website05/05.png
 ---
 
-Design and development for a fictional architectural firm using <a class="link" href="https://astro.build/">Astro</a>
+Design and development for a fictional architectural firm using Astro
