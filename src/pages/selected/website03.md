@@ -6,8 +6,8 @@ tags:
   - Astro
   - CSS
 link: https://klasnasman-wedding.netlify.app/
-year: 2023
+year: 2021
 thumb: /images/all/03.png
 ---
 
-I designed and developed this site using Astro, suitable as a portfolio for a photographer.
+I made this site to showcase my wedding photographs, made using Astro and a but if Javascript. 
