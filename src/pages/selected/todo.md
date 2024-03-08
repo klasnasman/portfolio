@@ -5,8 +5,8 @@ tags:
   - Javascript
   - CSS
 link: https://github.com/klasnasman/todo
-year: 2023
+year: 2022
 thumb: /images/all/todo/todo.png
 ---
 
-I developed a Javascript To Do App for a school project
+For my first school project, I built the classic To-Do App using JavaScript, learning about CRUD
