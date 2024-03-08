@@ -6,7 +6,7 @@ tags:
   - Astro
   - CSS
 link: https://arkitektbyra.netlify.app/
-year: 2023
-thumb: /images/all/website05/05.png
+year: 2024
+thumb: /images/all/04.png
 info: Site for Architecture firm
 ---

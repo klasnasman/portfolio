@@ -46,6 +46,7 @@ h3 {
 }
 
 .link {
+  position: relative;
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-color: var(--clr-text);
@@ -156,6 +157,19 @@ nav a:hover {
     text-wrap: unset;
     padding-inline: var(--spacer-m);
   }
+}
+
+.about__thumb {
+  display: none;
+  border-radius: 2px;
+}
+
+.link:hover .about__thumb {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 100px;
 }
 
 /* selected.astro  */
