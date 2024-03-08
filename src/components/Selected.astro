@@ -10,7 +10,7 @@ const allWork = await Astro.glob("../pages/selected/*.md");
           <div class="select__img">
             <a href={work.frontmatter.link}>
               <figure>
-                <Image class="lazy__load" src={work.frontmatter.thumb} alt="Project thumbnail"/>
+                <Image class="lazy__load" src={work.frontmatter.thumb} width={1200} alt="Project thumbnail"/>
               </figure>
             </a>
           </div>
