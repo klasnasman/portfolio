@@ -293,9 +293,15 @@ tr.row {
   padding-block: 0rem;
 }
 
-[role=columnheader] {
+.table__wrap th span {
   text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-color: var(--clr-text);
+  transition: text-decoration-color 0.4s;
+}
+
+.table__wrap th span:hover {
+  text-decoration: none;
 }
 
 @media only screen and (width <=750px) {
