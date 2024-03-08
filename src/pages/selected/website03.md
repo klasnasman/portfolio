@@ -6,7 +6,7 @@ tags:
   - Astro
   - CSS
 link: https://klasnasman-wedding.netlify.app/
-year: 2021
+year: 2022
 thumb: /images/all/03.png
 ---
 
