@@ -10,4 +10,4 @@ year: 2023
 thumb: /images/all/rockpaper/rockpaper.png
 ---
 
-I worked with my classmates on developing a Rock Paper Scissors app using React intended for testing in Cypress
+I worked with my classmates on developing a Rock Paper Scissors app using React intended for testing in Cypress.
