@@ -162,14 +162,14 @@ nav a:hover {
 .about__thumb {
   display: none;
   border-radius: 2px;
+  width: 100px;
 }
 
 .link:hover .about__thumb {
   display: block;
   position: absolute;
-  top: 100%;
-  left: 100%;
-  width: 100px;
+  top: 35px;
+  left: 0px;
 }
 
 /* selected.astro  */
