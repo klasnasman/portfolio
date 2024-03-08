@@ -6,7 +6,7 @@ tags:
   - CSS
 link: https://github.com/klasnasman/todo
 year: 2023
-thumb: /images/all/todo/todo.png
+thumb: /images/all/todo.png
 ---
 
 For my first school project, I built the classic To-Do app using JavaScript, learning about CRUD.
