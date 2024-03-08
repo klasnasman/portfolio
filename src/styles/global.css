@@ -130,7 +130,6 @@ nav a:hover {
 
 .about__span {
   text-wrap: balance;
-  padding-inline: var(--spacer-l);
 }
 
 .about__img {
@@ -365,7 +364,7 @@ footer {
 
 .footer__social {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
