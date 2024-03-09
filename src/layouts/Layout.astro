@@ -3,13 +3,6 @@ import Head from "@layouts/Head.astro";
 import Header from "@components/Header.astro";
 import Transitions from "@components/Transitions";
 import "@styles/import.css";
-
-export interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
-const canonicalURL = (Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -31,7 +24,8 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
       import "/src/assets/js/lazy.js";
       import "@assets/js/tableSort.js";
     </script>
-  </body><script is:inline>
+  </body>
+    <script is:inline>
     let darkMode = localStorage.getItem("darkMode");
 
     const darkModeToggle = document.querySelector("#theme__toggle");
