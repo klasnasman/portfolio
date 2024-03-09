@@ -1,0 +1,46 @@
+---
+import { AstroFont } from "astro-font";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  themeColor?: string;
+}
+
+const { title, description, themeColor } = Astro.props;
+const canonicalURL = (Astro.url.pathname, Astro.site);
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{"Klas Näsman"}</title>
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta name="theme-color" content={themeColor} />
+  <link rel="canonical" href={canonicalURL} />
+  <link rel="icon" type="image/png+xml" href="/favicon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <AstroFont
+      config={[
+        {
+          name: "Necto Mono",
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: '/fonts/NectoMono-Regular.woff2'
+            },
+          ],
+          preload: true,
+          display: "block",
+          fallback: "serif",
+        },
+      ]}
+    />
+  <!-- site by Out Surfing Studio -->
+</head>
