@@ -347,6 +347,7 @@ tbody:hover tr:not(:hover) {
 /* footer.astro */
 footer {
   display: flex;
+  flex-direction: row-reverse;
   position: sticky;
   bottom: 2rem;
   margin-inline: var(--spacer-m);
