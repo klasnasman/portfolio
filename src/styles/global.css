@@ -172,7 +172,7 @@ nav a:hover {
 .link:hover .about__thumb {
   display: block;
   position: absolute;
-  top: 35px;
+  bottom: 25px;
   left: 0px;
 }
 
