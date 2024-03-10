@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://klasnasman.netlify.app/",
+  site: "https://klasnasman.com",
   scopedStyleStrategy: "class",
   integrations: [react(), mdx()],
 });
