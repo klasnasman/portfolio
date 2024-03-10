@@ -162,6 +162,7 @@ nav a:hover {
   display: none;
   border-radius: 2px;
   width: 100px;
+  z-index: 100;
 }
 
 .link:hover .about__thumb {
