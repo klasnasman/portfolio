@@ -1,5 +1,5 @@
 ---
-project: Chat App
+project: Chat app
 type: School Project
 tags:
   - React Native
@@ -8,5 +8,4 @@ tags:
 link: https://github.com/klasnasman/ChatAPP
 year: 2023
 thumb: /images/all/website01/website01.jpg
-info: Chat App
 ---
