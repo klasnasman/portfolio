@@ -10,4 +10,4 @@ year: 2024
 thumb: /images/all/soderinvalencic.png
 ---
 
-I designed and developed this site using Astro, suitable as a portfolio for a photographer.
+This website showcases the work of Söderin Valencic Arkitektur, an architectural firm based in Åre, Sweden, and Trieste, Italy. It was created with Astro and uses Sanity as a CMS, ensuring easy content management.
