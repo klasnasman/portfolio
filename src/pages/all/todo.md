@@ -1,5 +1,5 @@
 ---
-project: To Do App
+project: To Do app
 type: School Project
 tags:
   - Javascript
