@@ -198,7 +198,6 @@ nav a:hover {
   padding-inline: var(--spacer-l);
 }
 
-
 @media (width <=720px) {
   .select__section {
     justify-content: center;
