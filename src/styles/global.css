@@ -219,7 +219,7 @@ nav a:hover {
 }
 
 .select__img img {
-  aspect-ratio: 1429/759;
+  aspect-ratio: 640/333;
   object-fit: fill;
   border-radius: 2px;
   box-shadow: 0.25rem 0.25rem 0.75rem var(--box-shadow);
