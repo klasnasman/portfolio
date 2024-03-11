@@ -7,7 +7,7 @@ tags:
   - CSS
 link: https://klasnasman-wedding.netlify.app/
 year: 2022
-thumb: /images/all/03.png
+thumb: ../../assets/images/all/03.png
 ---
 
 I created this site to display my wedding photographs, made using Astro along with some Javascript.

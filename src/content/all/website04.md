@@ -7,7 +7,4 @@ tags:
   - CSS
 link: https://arkitektbyra.netlify.app/
 year: 2024
-thumb: /images/all/04.png
 ---
-
-This is a site I designed and developed for a fictional architectural firm, made with Astro.

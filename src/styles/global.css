@@ -245,6 +245,7 @@ nav a:hover {
   justify-content: space-between;
   margin-block-start: var(--spacer-xs);
   margin-block-end: var(--spacer-s);
+  text-transform: capitalize;
 }
 
 /* all.astro */
@@ -321,6 +322,10 @@ tr.row {
 
 .td:last-child {
   width: fit-content;
+}
+
+td.type {
+  text-transform: capitalize;
 }
 
 @media only screen and (width <=750px) {

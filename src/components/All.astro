@@ -1,5 +1,7 @@
 ---
-const allWork = await Astro.glob("../pages/all/*.md*");
+import { getCollection } from "astro:content";
+
+const allWork = await getCollection("all");
 ---
 
 <section id="all">
@@ -18,20 +20,20 @@ const allWork = await Astro.glob("../pages/all/*.md*");
           <>
             <tr class="table__item">
               <td class="td project">
-                <a href={work.frontmatter.link}>{work.frontmatter.project}</a>
+                <a href={work.data.link}>{work.data.project}</a>
               </td>
               <td class="td type">
                 {" "}
-                <a href={work.frontmatter.link}>{work.frontmatter.type}</a>
+                <a href={work.data.link}>{work.data.type}</a>
               </td>
               <td class="td tags">
                 {" "}
-                <a href={work.frontmatter.link}>
-                  {work.frontmatter.tags.slice().sort().join(", ")}
+                <a href={work.data.link}>
+                  {work.data.tags.slice().sort().join(", ")}
                 </a>
               </td>
               <td class="td year">
-                <a href={work.frontmatter.link}>{work.frontmatter.year}</a>
+                <a href={work.data.link}>{work.data.year}</a>
               </td>
             </tr>
           </>

@@ -7,5 +7,4 @@ tags:
   - CSS
 link: https://klasnasman-astro.netlify.app/
 year: 2023
-thumb: /images/all/website01/website01.png
 ---

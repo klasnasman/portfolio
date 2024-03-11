@@ -1,29 +1,31 @@
 ---
 import { Image } from "astro:assets";
-const allWork = await Astro.glob("../pages/selected/*.md");
+import { getCollection } from "astro:content";
+
+const selectedEntry = await getCollection("selected");
 ---
 
 <section id="selected">
   {
-    allWork.map((work) => (
+    selectedEntry.map((entry: any) => (
         <section class="select__section">
           <div class="select__img">
-            <a href={work.frontmatter.link}>
+            <a href={entry.data.link}>
               <figure>
-                <Image class="lazy__load" src={work.frontmatter.thumb} width={800} height={532} alt="Project thumbnail"/>
+                <Image class="lazy__load" src={entry.data.thumb} alt="Project thumbnail" width={640} />
               </figure>
             </a>
           </div>
           <div class="select__info">
             <div class="select__heading">
               <div>
-               <p><a class="link" href={work.frontmatter.link}>{work.frontmatter.project}</a></p>
+               <p><a class="link" href={entry.data.link}>{entry.data.project}</a></p>
               </div>
               <div>
-               <p>{work.frontmatter.type}</p>
+               <p class="select__type">{entry.data.type}</p>
               </div>
            </div>
-            <p set:html={work.compiledContent()} />
+           <p>{entry.body}</p>
             </div>
            </section>
     ))

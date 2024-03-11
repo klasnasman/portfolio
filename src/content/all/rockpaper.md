@@ -6,5 +6,4 @@ tags:
   - CSS
 link: https://rockpapersax.netlify.com
 year: 2023
-thumb: /images/all/rockpaper/rockpaper.jpg
 ---
