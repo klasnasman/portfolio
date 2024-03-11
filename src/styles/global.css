@@ -191,27 +191,16 @@ nav a:hover {
   }
 }
 
-#selected>section {
+.select__section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-inline: var(--spacer-l);
 }
 
-/* #selected>section:nth-of-type(even) {
-  border-left: 1px dashed var(--clr-text);
-  border-right: 1px dashed var(--clr-text);
-} */
 
 @media (width <=750px) {
-  #selected>section:nth-of-type(even) {
-    border-left: 0px dashed;
-    border-right: 0px dashed;
-  }
-}
-
-@media (width <=750px) {
-  #selected>section {
+  .select__section {
     justify-content: center;
     padding-inline: var(--spacer-m);
     margin-block-end: 12rem;

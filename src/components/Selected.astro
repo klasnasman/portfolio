@@ -8,7 +8,7 @@ const selectedEntry = await getCollection("selected");
 <section id="selected">
   {
     selectedEntry.map((entry: any) => (
-        <section class="select__section">
+        <div class="select__section">
           <div class="select__img">
             <a href={entry.data.link}>
               <figure>
@@ -27,7 +27,7 @@ const selectedEntry = await getCollection("selected");
            </div>
            <p>{entry.body}</p>
             </div>
-           </section>
+           </div>
     ))
   }
 </section>
