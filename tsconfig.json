@@ -10,5 +10,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/styles/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
