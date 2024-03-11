@@ -24,5 +24,4 @@ const all = defineCollection({
 export const collections = {
   selected: selected,
   all: all,
-  about: about,
 };
