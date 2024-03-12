@@ -69,7 +69,7 @@ header {
   z-index: 10;
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   header {
     padding-inline: var(--spacer-m);
   }
@@ -80,7 +80,7 @@ nav {
   gap: 4rem;
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   nav {
     gap: var(--spacer-xs);
     flex-direction: column;
@@ -144,7 +144,7 @@ nav a:hover {
   filter: grayscale(0);
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   #about {
     flex-direction: column;
     gap: 1rem 0rem;
@@ -185,7 +185,7 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   #selected {
     padding-block-start: 16svh;
   }
@@ -198,7 +198,7 @@ nav a:hover {
   padding-inline: var(--spacer-l);
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   .select__section {
     justify-content: center;
     padding-inline: var(--spacer-m);
@@ -218,7 +218,7 @@ nav a:hover {
   outline: 1px solid var(--clr-text);
 }
 
-@media (width <=720px) {
+@media (width <=734px) {
   .select__img {
     width: 100%;
   }
@@ -297,7 +297,7 @@ tr.row {
   text-decoration: none;
 }
 
-@media only screen and (width <=720px) {
+@media only screen and (width <=734px) {
   .table__wrap tr {
     display: flex;
     justify-content: space-between;
@@ -316,7 +316,7 @@ td.type {
   text-transform: capitalize;
 }
 
-@media only screen and (width <=720px) {
+@media only screen and (width <=734px) {
   .td:not(:last-child) {
     width: calc(50% - 1rem);
   }
@@ -347,7 +347,13 @@ footer {
   display: flex;
   position: sticky;
   bottom: 2rem;
-  margin-inline: var(--spacer-m);
+  margin-inline: var(--spacer-l);
+}
+
+@media only screen and (width <=734px) {
+  footer {
+    margin-inline: var(--spacer-m);
+  }
 }
 
 .footer__wrap {
