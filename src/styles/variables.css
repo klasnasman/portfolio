@@ -17,8 +17,9 @@
   --spacer-m: 1rem;
   --spacer-l: 2rem;
 
-  --clr-bg: #f1f1f0;
-  --clr-text: black;
+  --color-background: #f1f1f0;
+  --color-text: black;
+  --color-focus: rgb(250, 240, 100);
   --box-shadow: rgba(29, 31, 32, 0.08);
 
   --header-height: 4rem;

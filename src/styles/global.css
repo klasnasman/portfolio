@@ -9,8 +9,8 @@ html {
 body {
   font-family: var(--ff-body);
   font-size: var(--step-0);
-  color: var(--clr-text);
-  background-color: var(--clr-bg);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 .flow>*+* {
@@ -32,12 +32,12 @@ body {
 /* type */
 a {
   display: inline-block;
-  color: var(--clr-text);
+  color: var(--color-text);
   text-decoration: none;
 }
 
 p {
-  color: var(--clr-text);
+  color: var(--color-text);
 }
 
 h3 {
@@ -47,9 +47,10 @@ h3 {
 
 .link {
   position: relative;
+  cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: var(--clr-text);
+  text-decoration-color: var(--color-text);
   transition: text-decoration-color 0.4s;
 }
 
@@ -105,7 +106,7 @@ nav a {
 nav a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: var(--clr-text);
+  text-decoration-color: var(--color-text);
   transition: text-decoration-color 0.4s;
 }
 
@@ -113,7 +114,7 @@ nav a:hover {
 .active {
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: var(--clr-text);
+  text-decoration-color: var(--color-text);
 }
 
 /* about.astro */
@@ -130,6 +131,7 @@ nav a:hover {
 
 .about__span {
   text-wrap: balance;
+  max-width: 75ch;
 }
 
 .about__img {
@@ -161,12 +163,9 @@ nav a:hover {
 .about__thumb {
   display: none;
   border-radius: 2px;
-  width: 100px;
-  z-index: 100;
-}
-
-.link {
-  cursor: pointer;
+  max-width: 100px;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .link:hover .about__thumb {
@@ -215,7 +214,7 @@ nav a:hover {
 }
 
 .select__img img:hover {
-  outline: 1px solid var(--clr-text);
+  outline: 1px solid var(--color-text);
 }
 
 @media (width <=734px) {
@@ -289,7 +288,7 @@ tr.row {
 .table__wrap th span {
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: var(--clr-text);
+  text-decoration-color: var(--color-text);
   transition: text-decoration-color 0.4s;
 }
 
@@ -379,5 +378,5 @@ img.social__img {
 }
 
 .svg {
-  fill: var(--clr-text);
+  fill: var(--color-text);
 }

@@ -68,7 +68,7 @@
     font-weight: inherit;
     line-height: inherit;
     padding: 0;
-    color: var(--clr-text);
+    color: var(--color-text);
 }
 
 :where(a) {
@@ -105,7 +105,7 @@
 }
 
 :where(:focus-visible) {
-    outline: 2px solid var(--focus-color, Highlight);
+    outline: 2px solid var(--color-focus, yellow);
     outline-offset: 2px;
 }
 
