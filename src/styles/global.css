@@ -245,8 +245,13 @@ nav a:hover {
 .table__wrap {
   flex: 1;
   border-collapse: collapse;
-  font-family: var(--ff-logo);
-  padding-inline: 1rem;
+  padding-inline: var(--spacer-l);
+}
+
+@media (width <=734px) {
+  .table__wrap {
+    padding-inline: var(--spacer-m);
+  }
 }
 
 .table__wrap,
