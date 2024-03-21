@@ -5,7 +5,7 @@ tags:
   - Javascript
   - Astro
   - CSS
-link: https://soderinvalencic.netlify.app/
+link: https://soderinvalencic.com
 year: 2024
 ---
 
