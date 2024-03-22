@@ -338,7 +338,7 @@ tbody:hover tr:not(:hover) {
 footer {
   display: flex;
   position: sticky;
-  bottom: 2rem;
+  bottom: 1rem;
   margin-inline: var(--spacer-l);
 }
 
