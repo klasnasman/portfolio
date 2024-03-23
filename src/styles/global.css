@@ -345,6 +345,7 @@ footer {
 @media only screen and (width <=734px) {
   footer {
     margin-inline: var(--spacer-m);
+    bottom: 2rem;
   }
 }
 
