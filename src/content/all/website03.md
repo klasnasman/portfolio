@@ -1,5 +1,5 @@
 ---
-project: Website 03
+project: Klas Näsman Bröllopsfoto
 type: Personal
 tags:
   - Javascript
