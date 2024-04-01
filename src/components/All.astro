@@ -2,6 +2,10 @@
 import { getCollection } from "astro:content";
 
 const allWork = await getCollection("all");
+
+const sortedWorks = allWork.sort((a, b) => {
+  return a.data.project.localeCompare(b.data.project);
+});
 ---
 
 <section id="all">
@@ -16,7 +20,7 @@ const allWork = await getCollection("all");
     </thead>
     <tbody>
       {
-        allWork.map((work) => (
+        sortedWorks.map((work) => (
           <>
             <tr class="table__item">
               <td class="td project">
