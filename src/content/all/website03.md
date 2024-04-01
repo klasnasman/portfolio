@@ -5,6 +5,6 @@ tags:
   - Javascript
   - Astro
   - CSS
-link: https://klasnasman-wedding.netlify.app/
+link: https://brollop.klasnasman.com
 year: 2023
 ---
