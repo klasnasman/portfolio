@@ -1,11 +1,11 @@
 ---
-project: Website 03
+project: Klas Näsman Bröllopsfoto
 type: Personal
 tags:
   - Javascript
   - Astro
   - CSS
-link: https://klasnasman-wedding.netlify.app/
+link: https://brollop.klasnasman.com
 year: 2022
 thumb: ../../assets/images/all/03.png
 ---
