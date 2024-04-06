@@ -40,7 +40,7 @@ p {
   color: var(--color-text);
 }
 
-h3 {
+h1 {
   font-family: var(--ff-logo);
   font-size: var(--step-0);
 }
@@ -51,7 +51,7 @@ h3 {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--color-text);
-  transition: text-decoration-color 0.4s;
+  transition: text-decoration-color var(--ease-0);
 }
 
 .link:hover {
@@ -107,7 +107,7 @@ nav a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--color-text);
-  transition: text-decoration-color 0.4s;
+  transition: text-decoration-color var(--ease-0);
 }
 
 /* active section underline */
@@ -282,7 +282,7 @@ tr.row {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--color-text);
-  transition: text-decoration-color 0.4s;
+  transition: text-decoration-color var(--ease-0);
 }
 
 .table__wrap th span:hover {
@@ -327,7 +327,7 @@ td.type {
 }
 
 tr {
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity var(--ease-0) ease-in-out;
 }
 
 tbody:hover tr:not(:hover) {
