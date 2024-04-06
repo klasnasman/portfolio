@@ -5,6 +5,6 @@ tags:
   - Javascript
   - Astro
   - CSS
-link: https://klasnasman.com/
+link: https://github.com/klasnasman/portfolio-spa
 year: 2023
 ---
