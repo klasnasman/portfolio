@@ -203,7 +203,7 @@ nav a:hover {
 
 .select__img img:hover {
   outline: 1px solid var(--color-text);
-    box-shadow: 0 2px 5px 0 rgba(255,255,255,.1), 0 5px 25px 0 var(--box-shadow);
+    box-shadow: 0 5px 5px rgb(0 0 0 / 10%), 0 5px 25px 0 rgb(0 0 0 / 20%);
     -webkit-transform: matrix(1, 0, 0, 1, 0, -2);
     transform: matrix(1, 0, 0, 1, 0, -2);
     transition: all .4s ease;
