@@ -23,6 +23,6 @@
   --color-text: black;
   --color-focus: rgb(255, 234, 94);
 
-  --box-shadow: rgba(0, 0, 0, 0.1);
+  --box-shadow: rgb(0 0 0 / 10%);
   --ease-0: 0.3s;
 }
