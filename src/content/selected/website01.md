@@ -5,7 +5,7 @@ tags:
   - Javascript
   - Astro
   - CSS
-link: https://klasnasman-astro.netlify.app/
+link: https://photography-01.netlify.app/ 
 year: 2022
 thumb: ../../assets/images/all/01.png
 ---
