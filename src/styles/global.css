@@ -198,16 +198,14 @@ nav a:hover {
   aspect-ratio: 380/198;
   object-fit: fill;
   border-radius: 2px;
-  box-shadow: 0.25rem 0.25rem 0.75rem var(--box-shadow);
-  outline: 1px solid transparent;
+  box-shadow: 2px 2px 6px var(--box-shadow);
 }
 
 .select__img img:hover {
-  outline: 1px solid var(--color-text);
-    box-shadow: 0 5px 5px rgb(0 0 0 / 10%), 0 5px 25px 0 rgb(0 0 0 / 20%);
-    -webkit-transform: matrix(1, 0, 0, 1, 0, -2);
-    transform: matrix(1, 0, 0, 1, 0, -2);
-    transition: all .4s ease;
+  box-shadow: 0 4px 4px var(--box-shadow), 0 4px 25px 0 rgb(0 0 0 / 12%);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, -2);
+  transform: matrix(1, 0, 0, 1, 0, -2);
+  transition: all .3s ease;
 }
 
 @media (width <=734px) {
@@ -382,51 +380,110 @@ img.social__img {
 
 @keyframes slide-enter {
   0% {
-      transform: translateY(10px);
-      opacity: 0
+    transform: translateY(10px);
+    opacity: 0
   }
 
   to {
-      transform: translateY(0);
-      opacity: 1
+    transform: translateY(0);
+    opacity: 1
   }
 }
 
-.enter > * {
---stagger: 0;
---delay: 150ms;
---start: 0ms;
-animation: slide-enter 1s both 1;
-animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+.enter>* {
+  --stagger: 0;
+  --delay: 150ms;
+  --start: 0ms;
+  animation: slide-enter 1s both 1;
+  animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
 }
 
-.enter > *:nth-child(1) { --stagger: 1; }
-.enter > *:nth-child(2) { --stagger: 2; }
-.enter > *:nth-child(3) { --stagger: 3; }
-.enter > *:nth-child(4) { --stagger: 4; }
-.enter > *:nth-child(5) { --stagger: 5; }
-.enter > *:nth-child(6) { --stagger: 6; }
-.enter > *:nth-child(7) { --stagger: 7; }
-.enter > *:nth-child(8) { --stagger: 8; }
-.enter > *:nth-child(9) { --stagger: 9; }
-.enter > *:nth-child(10) { --stagger: 10; }
-.enter > *:nth-child(11) { --stagger: 11; }
-.enter > *:nth-child(12) { --stagger: 12; }
-.enter > *:nth-child(13) { --stagger: 13; }
-.enter > *:nth-child(14) { --stagger: 14; }
-.enter > *:nth-child(15) { --stagger: 15; }
-.enter > *:nth-child(16) { --stagger: 16; }
-.enter > *:nth-child(17) { --stagger: 17; }
-.enter > *:nth-child(18) { --stagger: 18; }
-.enter > *:nth-child(19) { --stagger: 19; }
-.enter > *:nth-child(20) { --stagger: 20; }
+.enter>*:nth-child(1) {
+  --stagger: 1;
+}
+
+.enter>*:nth-child(2) {
+  --stagger: 2;
+}
+
+.enter>*:nth-child(3) {
+  --stagger: 3;
+}
+
+.enter>*:nth-child(4) {
+  --stagger: 4;
+}
+
+.enter>*:nth-child(5) {
+  --stagger: 5;
+}
+
+.enter>*:nth-child(6) {
+  --stagger: 6;
+}
+
+.enter>*:nth-child(7) {
+  --stagger: 7;
+}
+
+.enter>*:nth-child(8) {
+  --stagger: 8;
+}
+
+.enter>*:nth-child(9) {
+  --stagger: 9;
+}
+
+.enter>*:nth-child(10) {
+  --stagger: 10;
+}
+
+.enter>*:nth-child(11) {
+  --stagger: 11;
+}
+
+.enter>*:nth-child(12) {
+  --stagger: 12;
+}
+
+.enter>*:nth-child(13) {
+  --stagger: 13;
+}
+
+.enter>*:nth-child(14) {
+  --stagger: 14;
+}
+
+.enter>*:nth-child(15) {
+  --stagger: 15;
+}
+
+.enter>*:nth-child(16) {
+  --stagger: 16;
+}
+
+.enter>*:nth-child(17) {
+  --stagger: 17;
+}
+
+.enter>*:nth-child(18) {
+  --stagger: 18;
+}
+
+.enter>*:nth-child(19) {
+  --stagger: 19;
+}
+
+.enter>*:nth-child(20) {
+  --stagger: 20;
+}
 
 @media (prefers-reduced-motion: no-preference) {
-  html:not(.no-sliding) [slide-enter],html:not(.no-sliding) .slide-enter,html:not(.no-sliding) .slide-enter-content>*:not(:has(.table-of-contents)) {
-      --enter-stage: 0;
-      --enter-step: 90ms;
-      --enter-initial: 0ms;
-      animation: slide-enter 1s both 1;
-      animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step))
+  html:not(.no-sliding) [slide-enter], html:not(.no-sliding) .slide-enter, html:not(.no-sliding) .slide-enter-content>*:not(:has(.table-of-contents)) {
+    --enter-stage: 0;
+    --enter-step: 90ms;
+    --enter-initial: 0ms;
+    animation: slide-enter 1s both 1;
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step))
   }
 }
