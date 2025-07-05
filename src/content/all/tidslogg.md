@@ -6,7 +6,7 @@ tags:
   - Astro
   - CSS
   - Supabase
-link: https://kalender.klasnasman.com
+link: https://logg.klasnasman.com
 year: 2025
 thumb: ../../assets/images/all/tidslogg.png
 ---
