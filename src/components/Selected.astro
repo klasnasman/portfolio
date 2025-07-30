@@ -10,7 +10,7 @@ const selectedEntry = await getCollection("selected");
     selectedEntry.map((entry: any) => (
         <div class="select__section">
           <div class="select__img">
-            <a href={entry.data.link}>
+            <a href={entry.data.link} target="_blank">
               <figure>
                 <Image class="lazy__load" src={entry.data.thumb} alt="Project thumbnail" width={680} />
               </figure>
@@ -19,7 +19,7 @@ const selectedEntry = await getCollection("selected");
           <div class="select__info">
             <div class="select__heading">
               <div>
-               <p class="project__title"><a class="link" href={entry.data.link}>{entry.data.project}</a><span class="title__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3.5H8.5M8.5 3.5V7.5M8.5 3.5L4 8" stroke="currentColor"></path></svg></span></p>
+               <p class="project__title"><a class="link" target="_blank" href={entry.data.link}>{entry.data.project}</a><span class="title__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3.5H8.5M8.5 3.5V7.5M8.5 3.5L4 8" stroke="currentColor"></path></svg></span></p>
               </div>
               <div>
                <p class="select__type">{entry.data.type}</p>
