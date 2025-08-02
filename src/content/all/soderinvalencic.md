@@ -1,5 +1,5 @@
 ---
-project: Söderin Valencic
+project: Söderin Valencic Arkitektur
 type: Work
 tags:
   - Javascript
