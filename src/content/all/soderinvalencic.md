@@ -5,6 +5,7 @@ tags:
   - Javascript
   - Astro
   - CSS
+  - Motion
 link: https://soderinvalencic.com
 year: 2024
 ---
