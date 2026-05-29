@@ -8,3 +8,5 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+Sitemap: https://klasnasman.com/sitemap-index.xml

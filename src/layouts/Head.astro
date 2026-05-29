@@ -43,5 +43,23 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
         },
       ]}
     />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Klas Näsman",
+    "url": "https://klasnasman.com",
+    "jobTitle": "Designer & Web Developer",
+    "description": "Klas Näsman is a designer and web developer based in Stockholm, Sweden",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE"
+    },
+    "sameAs": [
+      "https://github.com/klasnasman",
+      "https://www.linkedin.com/in/klasnasman/",
+      "https://read.cv/klas"
+    ]
+  })} />
   <!-- site by Out Surfing Studio -->
 </head>
