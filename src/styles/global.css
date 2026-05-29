@@ -166,7 +166,7 @@ nav a:hover {
 
 /* selected.astro  */
 #selected {
-  --min: 45ch;
+  --min: 54ch;
 
   display: grid;
   gap: 4rem 0rem;
