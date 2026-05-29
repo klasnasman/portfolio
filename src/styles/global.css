@@ -198,13 +198,13 @@ nav a:hover {
   aspect-ratio: 380/198;
   object-fit: fill;
   border-radius: 2px;
-  box-shadow: 2px 2px 6px var(--box-shadow);
+  box-shadow: 1px 1px 4px var(--box-shadow);
 }
 
 .select__img img:hover {
-  box-shadow: 0 4px 4px var(--box-shadow), 0 4px 25px 0 rgb(0 0 0 / 12%);
-  -webkit-transform: matrix(1, 0, 0, 1, 0, -2);
-  transform: matrix(1, 0, 0, 1, 0, -2);
+  box-shadow: 0 1px 1px var(--box-shadow), 0 1px 10px 0 rgb(0 0 0 / 10%);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
+  transform: matrix(1, 0, 0, 1, 0, -1);
   transition: all .2s ease;
 }
 

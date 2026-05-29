@@ -7,8 +7,18 @@ import Footer from "@components/Footer.astro";
 ---
 
 <Layout title="Klas Näsman">
-  <About />
-  <Selected />
-  <All />
+  <section class="main__content">
+    <About />
+    <Selected />
+    <All />
+  </section>
   <Footer />
 </Layout>
+
+<style>
+.main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+</style>
