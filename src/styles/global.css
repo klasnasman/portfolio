@@ -135,8 +135,11 @@ nav a:hover {
 }
 
 .about__span {
-  text-wrap: balance;
   max-width: 75ch;
+}
+
+.about__paragraph {
+  text-wrap: balance;
 }
 
 @media (width <=734px) {
