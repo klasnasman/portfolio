@@ -5,10 +5,43 @@ export interface Props {
   title?: string;
   description?: string;
   themeColor?: string;
+  image?: string;
 }
 
-const { title, description, themeColor } = Astro.props;
-const canonicalURL = (Astro.url.pathname, Astro.site);
+const { title, description, themeColor, image } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = image ? new URL(image, Astro.site).href : undefined;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Klas Näsman",
+    "url": "https://klasnasman.com",
+    "jobTitle": "Designer & Web Developer",
+    "description": "Klas Näsman is a designer and web developer based in Stockholm, Sweden",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE"
+    },
+    "sameAs": [
+      "https://github.com/klasnasman",
+      "https://www.linkedin.com/in/klasnasman/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Klas Näsman",
+    "url": "https://klasnasman.com",
+    "description": "Klas Näsman is a designer and web developer based in Stockholm, Sweden",
+    "author": {
+      "@type": "Person",
+      "name": "Klas Näsman"
+    }
+  }
+];
 ---
 
 <head>
@@ -17,15 +50,26 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
   <meta name="description" content={description} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
+  <meta property="og:site_name" content="Klas Näsman" />
+  <meta property="og:locale" content="en_US" />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
+
   <meta name="theme-color" content={themeColor} />
-  <link rel="canonical" href={canonicalURL} />
   <link rel="icon" type="image/png+xml" href="/favicon.png" />
   <link rel="manifest" href="/manifest.json" />
-  <script data-goatcounter="https://klasnasman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script is:inline data-goatcounter="https://klasnasman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <AstroFont
       config={[
         {
@@ -43,22 +87,6 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
         },
       ]}
     />
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Klas Näsman",
-    "url": "https://klasnasman.com",
-    "jobTitle": "Designer & Web Developer",
-    "description": "Klas Näsman is a designer and web developer based in Stockholm, Sweden",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Stockholm",
-      "addressCountry": "SE"
-    },
-    "sameAs": [
-      "https://github.com/klasnasman",
-      "https://www.linkedin.com/in/klasnasman/"
-    ]
-  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <!-- site by Out Surfing Studio -->
 </head>
