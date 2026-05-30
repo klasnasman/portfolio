@@ -11,4 +11,4 @@ year: 2025
 thumb: ../../assets/images/all/note.png
 ---
 
-A personal time tracking application I developed with Astro and Supabase.
+A personal time tracking site I developed with Astro and Supabase.
