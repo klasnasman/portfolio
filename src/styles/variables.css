@@ -5,7 +5,7 @@
   /* 16.00px → 20.00px */
   --step-1: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
 
-  --ff-body: "Necto Mono", "Inconsolata", "Bergen Mono", "Courier New", monospace;
+  --ff-body: var(--font-iserif);
   --ff-logo: "Necto Mono", "Inconsolata", "Bergen Mono", "Courier New", monospace;
 
   --fw-light: 300;

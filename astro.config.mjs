@@ -1,5 +1,6 @@
 import react from "@astrojs/react";
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from 'astro/config';
+
 
 import sitemap from "@astrojs/sitemap";
 
@@ -13,6 +14,17 @@ export default defineConfig({
       priority: 1.0,
       lastmod: new Date(),
     }),
+  ],
+  fonts: [
+    {
+      provider: fontProviders.local(),
+      name: 'ISerif',
+      cssVariable: '--font-iserif',
+      fallbacks: ['serif'],
+      options: {
+        variants: [{ weight: '100 900', style: 'normal', src: ['./src/assets/fonts/ISerif.woff2'] }],
+      },
+    },
   ],
   prefetchAll: true,
 });

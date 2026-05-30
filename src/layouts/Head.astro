@@ -1,5 +1,5 @@
 ---
-import { AstroFont } from "astro-font";
+import { Font } from 'astro:assets';
 
 export interface Props {
   title?: string;
@@ -70,23 +70,7 @@ const structuredData = [
   <link rel="icon" type="image/png+xml" href="/favicon.png" />
   <link rel="manifest" href="/manifest.json" />
   <script is:inline data-goatcounter="https://klasnasman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <AstroFont
-      config={[
-        {
-          name: "Necto Mono",
-          src: [
-            {
-              style: 'normal',
-              weight: '400',
-              path: '/fonts/NectoMono-Regular.woff2'
-            },
-          ],
-          preload: true,
-          display: "block",
-          fallback: "serif",
-        },
-      ]}
-    />
+  <Font cssVariable='--font-iserif' preload />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <!-- site by Out Surfing Studio -->
 </head>
