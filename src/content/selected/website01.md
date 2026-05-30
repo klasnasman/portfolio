@@ -1,6 +1,6 @@
 ---
-project: Website 01
-type: Personal
+project: Hemsida 01
+type: Personligt
 tags:
   - Javascript
   - Astro
@@ -10,4 +10,4 @@ year: 2022
 thumb: ../../assets/images/all/01.png
 ---
 
-I designed and developed this site using Astro, suitable as a portfolio for a photographer.
+En konceptsajt jag designade för en fotograf. Målet var att hitta rätt balans, tillräckligt med struktur för att navigera, tillräckligt lite för att inte störa bilderna.

@@ -1,6 +1,6 @@
 ---
 project: Upprop
-type: Personal
+type: Personligt
 tags:
   - Javascript
   - Astro
@@ -11,4 +11,4 @@ year: 2026
 thumb: ../../assets/images/all/upprop.png
 ---
 
-A SaaS platform I built for [Korpen](https://korpenstockholm.zoezi.se/) teams, with team management, scheduling, and real-time chat. Developed with Astro, React, and Supabase.
+Att koordinera ett Korpen-lag via gruppchattar och Excel är inte hållbart i längden. Upprop är mitt försök att lösa det, matcher synkas automatiskt mot Korpens API, spelarna svarar om dom kan komma eller inte, och allt finns samlat på ett ställe.

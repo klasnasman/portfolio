@@ -1,6 +1,6 @@
 ---
 project: My portfolio
-type: Personal
+type: Personligt
 tags:
   - Javascript
   - Astro

@@ -1,6 +1,6 @@
 ---
-project: Website 02
-type: Personal
+project: Hemsida 02
+type: Personligt
 tags:
   - Javascript
   - CSS

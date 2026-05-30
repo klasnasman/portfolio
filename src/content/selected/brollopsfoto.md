@@ -1,6 +1,6 @@
 ---
 project: Klas Näsman Bröllopsfoto
-type: Personal
+type: Personligt
 tags:
   - Javascript
   - Astro
@@ -10,4 +10,4 @@ year: 2022
 thumb: ../../assets/images/all/03.png
 ---
 
-I created this site to display my wedding photographs. Made using Astro along with some Javascript.
+Jag skapade den här sidan för att visa upp mina bröllopsfotografier. Det var ett naturligt sätt att kombinera två saker jag tycker om, fotografering och webbutveckling. Fokus låg på att låta bilderna tala för sig själva.

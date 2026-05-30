@@ -1,6 +1,6 @@
 ---
-project: Website 01
-type: Personal
+project: Hemsida 01
+type: Personligt
 tags:
   - Javascript
   - Astro

@@ -38,7 +38,7 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
               <p class='select__type'>{entry.data.type}</p>
             </div>
           </div>
-          <p set:html={entry.rendered?.html} />
+          <div class="select__body" set:html={entry.rendered?.html} />
         </div>
       </div>
     ))

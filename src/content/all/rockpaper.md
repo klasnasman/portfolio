@@ -1,6 +1,6 @@
 ---
 project: Rock Paper Scissors
-type: School Project
+type: Skolprojekt
 tags:
   - React
   - CSS

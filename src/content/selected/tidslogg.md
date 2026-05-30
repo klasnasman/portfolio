@@ -1,6 +1,6 @@
 ---
 project: Note
-type: Personal
+type: Personligt
 tags:
   - Javascript
   - Astro
@@ -11,4 +11,4 @@ year: 2025
 thumb: ../../assets/images/all/note.png
 ---
 
-A personal time tracking site I developed with Astro and Supabase.
+Jag blev trött på att hålla koll på mina projekt i Excel. Så jag byggde Note, ett enkelt sätt att logga vad jag jobbar med och hur länge. Det är mest ett verktyg för mig själv, men det kan säkert vara användbart för någon annan också.

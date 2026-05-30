@@ -176,7 +176,7 @@ nav a:hover {
   --min: 54ch;
 
   display: grid;
-  gap: 4rem 0rem;
+  gap: 4rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
   padding-inline: var(--spacer-l);
 }
@@ -231,6 +231,10 @@ nav a:hover {
   margin-block-start: var(--spacer-xs);
   margin-block-end: var(--spacer-s);
   text-transform: capitalize;
+}
+
+.select__body > p {
+  text-wrap: pretty;
 }
 
 /* all.astro */

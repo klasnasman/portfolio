@@ -1,13 +1,14 @@
 ---
 project: Söderin Valencic Arkitektur
-type: Work
+type: Jobb
 tags:
   - Javascript
   - Astro
   - CSS
+  - Sanity
 link: https://soderinvalencic.com
 year: 2024
 thumb: ../../assets/images/all/soderinvalencic.png
 ---
 
-This website showcases the work of Söderin Valencic Arkitektur, an architectural firm based in Åre, Sweden, and Trieste, Italy. It was created with Astro and uses Sanity as a CMS.
+Den här webbplatsen visar upp arbetet från Söderin Valencic Arkitektur, ett arkitektkontor baserat i Åre, Sverige, och Trieste, Italien.

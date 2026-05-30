@@ -1,6 +1,6 @@
 ---
 project: Klas Näsman Bröllopsfoto
-type: Personal
+type: Personligt
 tags:
   - Javascript
   - Astro

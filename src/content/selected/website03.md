@@ -1,6 +1,6 @@
 ---
-project: Website 03
-type: Personal
+project: Hemsida 03
+type: Personligt
 tags:
   - Javascript
   - Astro
@@ -10,4 +10,4 @@ year: 2024
 thumb: ../../assets/images/all/04.png
 ---
 
-This is a site I designed and developed for a fictional architectural firm, made with Astro.
+En konceptsajt för ett fiktivt arkitektkontor.
