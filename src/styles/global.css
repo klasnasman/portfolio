@@ -135,7 +135,7 @@ nav a:hover {
 }
 
 .about__span {
-  max-width: 75ch;
+  max-width: 65ch;
 }
 
 .about__paragraph {
@@ -279,10 +279,21 @@ nav a:hover {
   text-align: right;
 }
 
-.td.project { width: 40%; }
-.td.type    { width: 15%; }
-.td.tags    { width: 30%; }
-.td.year    { width: 15%; }
+.td.project {
+  width: 40%;
+}
+
+.td.type {
+  width: 15%;
+}
+
+.td.tags {
+  width: 30%;
+}
+
+.td.year {
+  width: 15%;
+}
 
 .table__wrap th span {
   cursor: pointer;
@@ -301,6 +312,7 @@ td.type {
 }
 
 @media only screen and (width <=734px) {
+
   td.type,
   th.type {
     display: none;
@@ -361,6 +373,10 @@ img.social__img {
 
 .svg {
   fill: var(--color-text);
+}
+
+.flow>*+* {
+  margin-block-start: var(--flow-space, 1rem);
 }
 
 @keyframes slide-enter {
