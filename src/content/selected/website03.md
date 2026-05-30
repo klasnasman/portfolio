@@ -10,4 +10,4 @@ year: 2024
 thumb: ../../assets/images/all/04.png
 ---
 
-En konceptsajt för ett fiktivt arkitektkontor.
+En konceptsida för ett fiktivt arkitektkontor.
