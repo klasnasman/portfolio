@@ -10,4 +10,4 @@ year: 2022
 thumb: ../../assets/images/all/brollopsfoto.png
 ---
 
-Jag skapade den här sidan för att visa upp mina bröllopsbilder. Det var ett naturligt sätt att kombinera två saker jag tycker om, fotografering och webbutveckling.
+Jag gjorde den här sidan för att visa upp mina bröllopsbilder. Det var ett naturligt sätt att kombinera två saker jag tycker om, fotografering och webbutveckling.
