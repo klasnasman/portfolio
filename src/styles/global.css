@@ -105,20 +105,14 @@ nav>div {
 
 /* nav hover underline */
 nav a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
   text-decoration-color: transparent;
+  transition: text-decoration-color 0.6s;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: var(--color-text);
-  transition: text-decoration-color var(--ease-0);
-}
-
-/* active section underline */
+nav a:hover,
 .active {
-  text-decoration: underline;
-  text-underline-offset: 2px;
   text-decoration-color: var(--color-text);
 }
 
