@@ -2,7 +2,7 @@
 project: Note
 type: Personligt
 tags:
-  - Javascript
+  - JavaScript
   - Astro
   - CSS
   - Supabase

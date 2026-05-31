@@ -2,7 +2,7 @@
 project: Hemsida 01
 type: Personligt
 tags:
-  - Javascript
+  - JavaScript
   - Astro
   - CSS
 link: https://photography-01.netlify.app/ 

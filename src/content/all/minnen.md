@@ -1,11 +1,11 @@
 ---
-project: Upprop
+project: Minnen
 type: Personligt
 tags:
   - JavaScript
   - Astro
   - CSS
-  - Supabase
-link: https://upprop.se/
+  - Sanity
+link: https://minnen.klasnasman.com/
 year: 2026
 ---

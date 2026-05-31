@@ -2,7 +2,7 @@
 project: Klas Näsman Bröllopsfoto
 type: Personligt
 tags:
-  - Javascript
+  - JavaScript
   - Astro
   - CSS
   - Motion

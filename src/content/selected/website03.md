@@ -2,7 +2,7 @@
 project: Hemsida 03
 type: Personligt
 tags:
-  - Javascript
+  - JavaScript
   - Astro
   - CSS
 link: https://arkitektbyra.netlify.app/

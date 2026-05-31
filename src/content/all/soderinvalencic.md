@@ -2,7 +2,7 @@
 project: Söderin Valencic Arkitektur
 type: Jobb
 tags:
-  - Javascript
+  - JavaScript
   - Astro
   - CSS
   - Sanity
