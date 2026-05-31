@@ -7,7 +7,7 @@ tags:
   - CSS
 link: https://arkitektbyra.netlify.app/
 year: 2024
-thumb: ../../assets/images/all/04.png
+thumb: ../../assets/images/all/arkitektbyra.png
 ---
 
 En konceptsida för ett fiktivt arkitektkontor.
