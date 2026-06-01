@@ -13,6 +13,14 @@ body {
   background-color: var(--color-background);
 }
 
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  border-color: var(--color-border);
+}
+
 .flow>*+* {
   margin-top: var(--flow-space, 0.7em);
 }
@@ -188,6 +196,19 @@ nav a:hover,
   align-items: center;
 }
 
+
+.select__img {
+  width: 100%;
+}
+
+.select__img a {
+  display: block;
+}
+
+.select__img figure {
+  margin: 0;
+}
+
 @media (width <=734px) {
   .select__section {
     justify-content: center;
@@ -199,14 +220,12 @@ nav a:hover,
   aspect-ratio: 3024/1656;
   object-fit: cover;
   border-radius: 2px;
-  box-shadow: 1px 1px 4px var(--box-shadow);
+  box-shadow: 0px 0px 0px 1px var(--color-border);
+  transition: box-shadow .1s;
 }
 
 .select__img img:hover {
-  box-shadow: 0 1px 1px var(--box-shadow), 0 1px 10px 0 rgb(0 0 0 / 10%);
-  -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
-  transform: matrix(1, 0, 0, 1, 0, -1);
-  transition: all .2s ease;
+  box-shadow: 0px 0px 0px 1px var(--color-text);
 }
 
 @media (width <=734px) {
@@ -227,7 +246,7 @@ nav a:hover,
   text-transform: capitalize;
 }
 
-.select__body > p {
+.select__body>p {
   text-wrap: pretty;
 }
 

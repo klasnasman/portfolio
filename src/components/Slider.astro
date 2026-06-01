@@ -1,0 +1,244 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface SliderImage {
+  src: ImageMetadata;
+  alt?: string;
+}
+
+interface Props {
+  images?: SliderImage[];
+  count?: number;
+  aspect?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  project?: string;
+  type?: string;
+  link?: string;
+}
+
+const { images, count, aspect = '3024/1656', loading = 'lazy', fetchpriority, project, type, link } = Astro.props;
+const hasImages = images && images.length > 0;
+const slideCount = hasImages ? images.length : (count ?? 0);
+---
+
+<section class='image-slider' tabindex='0'>
+  <div class='outer'>
+    <div class='inner' style={`aspect-ratio: ${aspect}`}>
+      {hasImages
+        ? images.map((image, index) => (
+            <div class='slide' id={`slide-${index}`}>
+              <Image
+                src={image.src}
+                alt={image.alt || ''}
+                class='slide-img'
+                width={1400}
+                loading={loading}
+                fetchpriority={index === 0 ? fetchpriority : undefined}
+              />
+            </div>
+          ))
+        : <slot />
+      }
+    </div>
+
+    <div class='select__heading'>
+      <p class='project__title'>
+        <a class='link' href={link} target='_blank'>{project}</a>
+        <span class='title__arrow'>
+          <svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M4.5 3.5H8.5M8.5 3.5V7.5M8.5 3.5L4 8' stroke='currentColor' />
+          </svg>
+        </span>
+      </p>
+      {slideCount > 1 && (
+        <div class='pagination'>
+          {Array.from({ length: slideCount }).map((_, index) => (
+            <button
+              class:list={['pagination-dot', { active: index === 0 }]}
+              data-index={index}
+              aria-label={`Gå till bild ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+      <p class='select__type'>{type}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .inner {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px var(--color-border);
+    transition: box-shadow .1s;
+  }
+
+  .inner:hover {
+    box-shadow: 0px 0px 0px 1px var(--color-text);
+  }
+
+  .inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inner.cursor-left {
+    cursor: w-resize;
+  }
+
+  .inner.cursor-right {
+    cursor: e-resize;
+  }
+
+  .inner :global(.slide) {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .inner :global(.slide:last-of-type) {
+    scroll-snap-align: end;
+  }
+
+  .inner :global(.slide-img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .title__arrow {
+    display: inline-flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2px);
+    transition: opacity var(--ease-0), visibility var(--ease-0);
+  }
+
+  .project__title:hover .title__arrow {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .pagination {
+    --size: 8px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination-dot {
+    flex: 0 0 var(--size);
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc(var(--size) * 2);
+    background: var(--color-border);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition:
+      flex 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .pagination-dot:hover {
+    background: var(--color-muted);
+  }
+
+  .pagination-dot.active {
+    flex: 0 0 20px;
+    background: var(--color-text);
+  }
+</style>
+
+<script>
+  function initSlider(slider: Element) {
+    const inner = slider.querySelector('.inner') as HTMLElement | null;
+    const slides = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.pagination-dot');
+
+    if (!inner || !slides.length) return;
+
+    const getCurrentIndex = () => Math.round(inner.scrollLeft / inner.clientWidth);
+
+    const updateUI = () => {
+      const index = getCurrentIndex();
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    };
+
+    const navigate = (direction: 'next' | 'prev') => {
+      const index = getCurrentIndex();
+      const newIndex = direction === 'next' ? index + 1 : index - 1;
+      if (newIndex >= 0 && newIndex < slides.length) {
+        inner.scrollTo({ left: newIndex * inner.clientWidth, behavior: 'smooth' });
+      }
+    };
+
+    inner.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = inner.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const index = getCurrentIndex();
+      inner.classList.remove('cursor-left', 'cursor-right');
+      if (x < rect.width / 2) {
+        if (index > 0) inner.classList.add('cursor-left');
+      } else {
+        if (index < slides.length - 1) inner.classList.add('cursor-right');
+      }
+    });
+
+    inner.addEventListener('mouseleave', () => {
+      inner.classList.remove('cursor-left', 'cursor-right');
+    });
+
+    inner.addEventListener('click', (e: MouseEvent) => {
+      const rect = inner.getBoundingClientRect();
+      navigate(e.clientX - rect.left < rect.width / 2 ? 'prev' : 'next');
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        inner.scrollTo({ left: i * inner.clientWidth, behavior: 'smooth' });
+      });
+    });
+
+    let timeout: ReturnType<typeof setTimeout>;
+    inner.addEventListener('scroll', () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(updateUI, 20);
+    }, { passive: true });
+
+    slider.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        navigate(e.key === 'ArrowRight' ? 'next' : 'prev');
+      }
+    });
+
+    updateUI();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.image-slider').forEach(initSlider);
+  });
+</script>

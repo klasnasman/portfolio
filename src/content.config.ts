@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "zod";
 import { glob } from "astro/loaders";
 
 const selected = defineCollection({
@@ -10,7 +11,8 @@ const selected = defineCollection({
       tags: z.array(z.string()),
       link: z.string(),
       year: z.number(),
-      thumb: image(),
+      thumb: image().optional(),
+      images: z.array(image()).optional(),
     }),
 });
 const all = defineCollection({
