@@ -181,6 +181,7 @@ nav a:hover,
   gap: 4rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
   padding-inline: var(--spacer-l);
+  scroll-margin-top: 3rem;
 }
 
 @media (width <=734px) {
