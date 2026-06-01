@@ -12,23 +12,15 @@
     "@astrojs/mdx": "^6.0.1",
     "@astrojs/react": "^5.0.6",
     "@astrojs/sitemap": "^3.7.3",
-    "@types/react": "^18.0.31",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
     "astro": "^6.4.2",
-    "desandro-matches-selector": "^2.0.2",
-    "framer-motion": "^10.10.0",
-    "jquery": "^3.6.4",
-    "jquery-bridget": "^3.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-lazy-load": "^4.0.1",
-    "rollup": "^3.20.2",
-    "unipointer": "^2.4.0",
-    "uniq": "^1.0.1"
+    "framer-motion": "^12.40.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "prettier": "^2.8.8",
-    "prettier-plugin-astro": "^0.8.0"
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
