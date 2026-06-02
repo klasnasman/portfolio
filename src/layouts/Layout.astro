@@ -2,6 +2,7 @@
 import Head from "@layouts/Head.astro";
 import Header from "@components/Header.astro";
 import "@styles/import.css";
+import Footer from "@components/Footer.astro";
 ---
 
 <!doctype html>
@@ -12,18 +13,18 @@ import "@styles/import.css";
     themeColor='#f1f1f0'
   />
   <body>
-    <main class='main enter'>
-      <Header />
+    <Header />
+    <main class='main'>
       <slot />
     </main>
+    <Footer />
+
     <script>
       import "@assets/js/sectionObserver.js";
       import "@assets/js/lazy.js";
       import "@assets/js/tableSort.js";
     </script>
-  </body>
-  
-  <script is:inline>
+  </body><script is:inline>
     let darkMode = localStorage.getItem("darkMode");
 
     const darkModeToggle = document.querySelector("#theme__toggle");

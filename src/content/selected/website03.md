@@ -8,8 +8,8 @@ tags:
 link: https://arkitektbyra.netlify.app/
 year: 2024
 images: 
-  - ../../assets/images/all/arkitektbyra.png
-  - ../../assets/images/all/arkitektbyra02.png
+  - ../../assets/images/selected/arkitektbyra.png
+  - ../../assets/images/selected/arkitektbyra02.png
 ---
 
 En konceptsida för ett fiktivt arkitektkontor.

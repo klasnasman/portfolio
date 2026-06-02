@@ -37,11 +37,6 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
                     <a class='link' target='_blank' href={entry.data.link}>
                       {entry.data.project}
                     </a>
-                    <span class='title__arrow'>
-                      <svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M4.5 3.5H8.5M8.5 3.5V7.5M8.5 3.5L4 8' stroke='currentColor' />
-                      </svg>
-                    </span>
                   </>
                 </p>
               </div>
@@ -57,17 +52,3 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
   }
 </section>
 
-<style>
-  .title__arrow {
-    display: inline-flex;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(2px);
-    transition: opacity var(--ease-0), visibility var(--ease-0);
-  }
-
-  .project__title:hover .title__arrow {
-    opacity: 1;
-    visibility: visible;
-  }
-</style>

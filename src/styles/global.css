@@ -140,8 +140,8 @@ nav a:hover,
   max-width: 75ch;
 }
 
-.about__paragraph {
-  text-wrap: balance;
+.about__span p {
+  text-wrap: pretty;
 }
 
 @media (width <=734px) {
@@ -248,9 +248,19 @@ nav a:hover,
 .select__heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-block-start: var(--spacer-xs);
   margin-block-end: var(--spacer-s);
   text-transform: capitalize;
+}
+
+.select__heading--grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.select__heading--grid .select__type {
+  text-align: end;
 }
 
 .select__body>p {
@@ -416,8 +426,8 @@ img.social__img {
 }
 
 .enter>* {
-  --stagger: 20ms;
-  --delay: 0ms;
+  --stagger: 0ms;
+  --delay: 50ms;
   --start: 0ms;
   animation: slide-enter 1s both 1;
   animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
@@ -441,74 +451,4 @@ img.social__img {
 
 .enter>*:nth-child(5) {
   --stagger: 5;
-}
-
-.enter>*:nth-child(6) {
-  --stagger: 6;
-}
-
-.enter>*:nth-child(7) {
-  --stagger: 7;
-}
-
-.enter>*:nth-child(8) {
-  --stagger: 8;
-}
-
-.enter>*:nth-child(9) {
-  --stagger: 9;
-}
-
-.enter>*:nth-child(10) {
-  --stagger: 10;
-}
-
-.enter>*:nth-child(11) {
-  --stagger: 11;
-}
-
-.enter>*:nth-child(12) {
-  --stagger: 12;
-}
-
-.enter>*:nth-child(13) {
-  --stagger: 13;
-}
-
-.enter>*:nth-child(14) {
-  --stagger: 14;
-}
-
-.enter>*:nth-child(15) {
-  --stagger: 15;
-}
-
-.enter>*:nth-child(16) {
-  --stagger: 16;
-}
-
-.enter>*:nth-child(17) {
-  --stagger: 17;
-}
-
-.enter>*:nth-child(18) {
-  --stagger: 18;
-}
-
-.enter>*:nth-child(19) {
-  --stagger: 19;
-}
-
-.enter>*:nth-child(20) {
-  --stagger: 20;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html:not(.no-sliding) [slide-enter], html:not(.no-sliding) .slide-enter, html:not(.no-sliding) .slide-enter-content>*:not(:has(.table-of-contents)) {
-    --enter-stage: 0;
-    --enter-step: 90ms;
-    --enter-initial: 0ms;
-    animation: slide-enter 1s both 1;
-    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step))
-  }
 }

@@ -1,6 +1,6 @@
 import react from "@astrojs/react";
-import { defineConfig, fontProviders } from 'astro/config';
-
+import mdx from "@astrojs/mdx";
+import { defineConfig, fontProviders } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -8,6 +8,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://klasnasman.com",
   integrations: [
+    mdx(),
     react(),
     sitemap({
       changefreq: "monthly",
@@ -18,13 +19,12 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.local(),
-      name: 'ISerif',
-      cssVariable: '--font-iserif',
-      fallbacks: ['serif'],
+      name: "ISerif",
+      cssVariable: "--font-iserif",
+      fallbacks: ["serif"],
       options: {
-        variants: [{ weight: '100 900', style: 'normal', src: ['./src/assets/fonts/ISerif.woff2'] }],
+        variants: [{ weight: "100 900", style: "normal", src: ["./src/assets/fonts/ISerif.woff2"] }],
       },
     },
   ],
-  prefetchAll: true,
 });

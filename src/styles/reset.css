@@ -21,12 +21,6 @@
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    :where(html:focus-within) {
-        scroll-behavior: smooth;
-    }
-}
-
 :where(body) {
     block-size: 100%;
     block-size: 100dvb;
@@ -117,4 +111,17 @@
     position: absolute !important;
     white-space: nowrap !important;
     border: 0 !important;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    :after,
+    :before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

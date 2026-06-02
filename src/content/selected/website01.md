@@ -7,7 +7,7 @@ tags:
   - CSS
 link: https://photography-01.netlify.app/ 
 year: 2022
-thumb: ../../assets/images/all/foto.png
+thumb: ../../assets/images/selected/foto.png
 ---
 
 En koncepsida för en fotograf.
