@@ -11,7 +11,7 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
 <section id='selected'>
   {
     selectedEntry.map((entry: any) => (
-      <div class='select__section'>
+      <div class='select__section lazy__load'>
         <div class='select__img'>
           {entry.data.images ? (
             <Slider
@@ -23,7 +23,7 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
           ) : entry.data.thumb ? (
             <a href={entry.data.link} target='_blank'>
               <figure>
-                <Image class='lazy__load' src={entry.data.thumb} alt='Project thumbnail' width={1400} />
+                <Image src={entry.data.thumb} alt='Project thumbnail' width={1400} />
               </figure>
             </a>
           ) : null}

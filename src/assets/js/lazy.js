@@ -22,5 +22,5 @@ function checkScroll() {
   }
 }
 
-checkScroll();
+requestAnimationFrame(checkScroll);
 window.addEventListener("scroll", checkScroll);
