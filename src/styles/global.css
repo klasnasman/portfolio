@@ -402,7 +402,7 @@ img.social__img {
 
 @keyframes slide-enter {
   0% {
-    transform: translateY(10px);
+    transform: translateY(2px);
     opacity: 0
   }
 
@@ -413,8 +413,8 @@ img.social__img {
 }
 
 .enter>* {
-  --stagger: 0;
-  --delay: 150ms;
+  --stagger: 20ms;
+  --delay: 0ms;
   --start: 0ms;
   animation: slide-enter 1s both 1;
   animation-delay: calc(var(--start) + var(--stagger) * var(--delay));

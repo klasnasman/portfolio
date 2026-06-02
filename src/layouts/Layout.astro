@@ -1,31 +1,29 @@
 ---
 import Head from "@layouts/Head.astro";
 import Header from "@components/Header.astro";
-import Transitions from "@components/Transitions";
 import "@styles/import.css";
 ---
 
-<!DOCTYPE html>
-<html lang="sv">
+<!doctype html>
+<html lang='sv'>
   <Head
-    title="Klas Näsman"
-    description="Klas Näsman är en designer och webbutvecklare baserad i Stockholm, Sverige"
-    themeColor="#f1f1f0"
+    title='Klas Näsman'
+    description='Klas Näsman är en designer och webbutvecklare baserad i Stockholm, Sverige'
+    themeColor='#f1f1f0'
   />
   <body>
-    <main class="main">
+    <main class='main enter'>
       <Header />
-      <Transitions client:load>
-        <slot />
-      </Transitions>
+      <slot />
     </main>
     <script>
-      import "/src/assets/js/sectionObserver.js";
-      import "/src/assets/js/lazy.js";
+      import "@assets/js/sectionObserver.js";
+      import "@assets/js/lazy.js";
       import "@assets/js/tableSort.js";
     </script>
   </body>
-    <script is:inline>
+  
+  <script is:inline>
     let darkMode = localStorage.getItem("darkMode");
 
     const darkModeToggle = document.querySelector("#theme__toggle");
