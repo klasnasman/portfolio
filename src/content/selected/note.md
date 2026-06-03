@@ -16,4 +16,4 @@ imagesDark:
   - ../../assets/images/selected/note.dark02.png
 ---
 
-Jag blev trött på att hålla koll på mina projekt i Excel. Så jag byggde Note, ett enkelt sätt att logga vad jag jobbar med. Det är mest ett verktyg för mig själv, men det kan säkert vara användbart för någon annan också.
+Jag blev trött på att hålla koll på mina projekt i Excel, så jag byggde Note - ett enkelt sätt att logga vad jag jobbar med. Det är främst ett verktyg för mig själv, men det kan säkert vara användbart för andra också.
