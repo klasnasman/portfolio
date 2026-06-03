@@ -72,5 +72,12 @@ const structuredData = [
   <script is:inline data-goatcounter="https://klasnasman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <Font cssVariable='--font-iserif' preload />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script is:inline>
+    const stored = localStorage.getItem("darkMode");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (stored === "enabled" || (stored === null && prefersDark)) {
+      document.documentElement.classList.add("darkmode");
+    }
+  </script>
   <!-- site by Out Surfing Studio -->
 </head>

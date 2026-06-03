@@ -12,7 +12,9 @@ const selected = defineCollection({
       link: z.string(),
       year: z.number(),
       thumb: image().optional(),
+      thumbDark: image().optional(),
       images: z.array(image()).optional(),
+      imagesDark: z.array(image()).optional(),
     }),
 });
 const all = defineCollection({

@@ -16,6 +16,7 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
           {entry.data.images ? (
             <Slider
               images={entry.data.images.map((src: any) => ({ src, alt: entry.data.project }))}
+              imagesDark={entry.data.imagesDark?.map((src: any) => ({ src, alt: entry.data.project }))}
               project={entry.data.project}
               type={entry.data.type}
               link={entry.data.link}
@@ -23,7 +24,21 @@ const selectedEntry = (await getCollection("selected")).sort((a, b) =>
           ) : entry.data.thumb ? (
             <a href={entry.data.link} target='_blank'>
               <figure>
-                <Image src={entry.data.thumb} alt='Project thumbnail' width={1400} />
+                <Image
+                  src={entry.data.thumb}
+                  alt='Project thumbnail'
+                  width={1400}
+                  class={entry.data.thumbDark ? 'light-only' : undefined}
+                />
+                {entry.data.thumbDark && (
+                  <Image
+                    src={entry.data.thumbDark}
+                    alt='Project thumbnail'
+                    width={1400}
+                    class='dark-only'
+                    loading='lazy'
+                  />
+                )}
               </figure>
             </a>
           ) : null}

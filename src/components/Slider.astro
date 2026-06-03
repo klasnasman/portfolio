@@ -9,6 +9,7 @@ interface SliderImage {
 
 interface Props {
   images?: SliderImage[];
+  imagesDark?: SliderImage[];
   count?: number;
   aspect?: string;
   loading?: "lazy" | "eager";
@@ -18,7 +19,7 @@ interface Props {
   link?: string;
 }
 
-const { images, count, aspect = "3024/1656", loading = "lazy", fetchpriority, project, type, link } = Astro.props;
+const { images, imagesDark, count, aspect = "3024/1656", loading = "lazy", fetchpriority, project, type, link } = Astro.props;
 const hasImages = images && images.length > 0;
 const slideCount = hasImages ? images.length : (count ?? 0);
 ---
@@ -33,11 +34,20 @@ const slideCount = hasImages ? images.length : (count ?? 0);
               <Image
                 src={image.src}
                 alt={image.alt || ""}
-                class='slide-img'
+                class={imagesDark?.[index] ? 'slide-img light-only' : 'slide-img'}
                 width={1400}
                 loading={loading}
                 fetchpriority={index === 0 ? fetchpriority : undefined}
               />
+              {imagesDark?.[index] && (
+                <Image
+                  src={imagesDark[index].src}
+                  alt={imagesDark[index].alt || ""}
+                  class='slide-img dark-only'
+                  width={1400}
+                  loading='lazy'
+                />
+              )}
             </div>
           ))
         ) : (

@@ -21,11 +21,23 @@ body {
   border-color: var(--color-border);
 }
 
+/* theme image variants */
+.dark-only {
+  display: none;
+}
+
+:root.darkmode .light-only {
+  display: none;
+}
+
+:root.darkmode .dark-only {
+  display: block;
+}
+
 .flow>*+* {
   margin-top: var(--flow-space, 0.7em);
 }
 
-/* lazy load images */
 .lazy__load {
   opacity: 0;
   transition: 1s ease-out;
