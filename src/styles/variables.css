@@ -25,5 +25,5 @@
   --color-border: color-mix(in oklab, #030712, white 82%);
 
   --box-shadow: rgb(0 0 0 / 8%);
-  --ease-0: 0.3s;
+  --ease-0: 0.2s;
 }
