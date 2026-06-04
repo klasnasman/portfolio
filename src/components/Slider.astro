@@ -65,7 +65,7 @@ const slideCount = hasImages ? images.length : (count ?? 0);
           <div class='pagination'>
             {Array.from({ length: slideCount }).map((_, index) => (
               <button
-                class:list={["pagination-dot", { active: index === 0 }]}
+                class:list={["pagination-dot clickable-area", { active: index === 0 }]}
                 data-index={index}
                 aria-label={`Gå till bild ${index + 1}`}
               />
@@ -159,11 +159,12 @@ const slideCount = hasImages ? images.length : (count ?? 0);
     padding: 0;
     transition:
       flex 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .pagination-dot:hover {
-    background: var(--color-muted);
+  .pagination-dot:not(.active):hover {
+    opacity: 0.6;
   }
 
   .pagination-dot.active {
