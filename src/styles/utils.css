@@ -1,0 +1,12 @@
+  /* Increases clickable area for small elements (e.g. icons) */
+  .clickable-area {
+    position: relative;
+    contain: layout;
+    will-change: transform;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0 -4px;
+    }
+  }

@@ -1,12 +1,16 @@
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
 import { defineConfig, fontProviders } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://klasnasman.com",
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
     mdx(),
     react(),
