@@ -1,24 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      const targetId = entry.target.id;
-      const targetNavLink = document.querySelector(`a[href="#${targetId}"]`);
+  const visibilityMap = {};
 
-      if (entry.isIntersecting) {
-        targetNavLink.classList.add("active");
-      } else {
-        targetNavLink.classList.remove("active");
-      }
+  const updateActive = () => {
+    const entries = Object.entries(visibilityMap);
+    const mostVisible = entries.sort(([, a], [, b]) => b - a)[0];
+
+    entries.forEach(([id]) => {
+      const link = document.querySelector(`a[href="#${id}"]`);
+      if (!link) return;
+      const isActive = mostVisible && mostVisible[0] === id && mostVisible[1] > 0;
+      link.classList.toggle("active", isActive);
     });
   };
 
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      visibilityMap[entry.target.id] = entry.intersectionRect.height;
+    });
+    updateActive();
+  };
+
   const setupObserver = () => {
-    const isMobile = window.innerWidth < 750;
-    const threshold = isMobile ? [0.2] : [0.5];
+    const thresholds = Array.from({ length: 11 }, (_, i) => i / 10);
 
     const observer = new IntersectionObserver(handleIntersection, {
       rootMargin: "0px",
-      threshold: threshold,
+      threshold: thresholds,
     });
 
     const sections = document.querySelectorAll("#about, #selected, #all");
