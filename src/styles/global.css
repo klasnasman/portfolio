@@ -52,12 +52,7 @@ body {
 /* type */
 a {
   display: inline-block;
-  color: var(--color-text);
   text-decoration: none;
-}
-
-p {
-  color: var(--color-text);
 }
 
 h1 {
