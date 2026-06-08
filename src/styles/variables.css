@@ -23,7 +23,7 @@
   --color-background: #f1f1f0;
   --color-text: #030712;
   --color-focus: rgb(255, 234, 94);
-  --color-border: color-mix(in srgb, #030712, white 82%);
+  --color-border: color-mix(in srgb, #030712, white 65%);
 
   --box-shadow: rgb(0 0 0 / 8%);
   --ease-0: 0.2s;

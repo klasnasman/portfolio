@@ -13,3 +13,51 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  .svg {
+    fill: var(--color-text);
+  }
+
+  .flow>*+* {
+    margin-block-start: var(--flow-space, 1rem);
+  }
+
+  @keyframes slide-enter {
+    0% {
+      transform: translateY(2px);
+      opacity: 0
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1
+    }
+  }
+
+  .enter>* {
+    --stagger: 0ms;
+    --delay: 50ms;
+    --start: 0ms;
+    animation: slide-enter 1s both 1;
+    animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+  }
+
+  .enter>*:nth-child(1) {
+    --stagger: 1;
+  }
+
+  .enter>*:nth-child(2) {
+    --stagger: 2;
+  }
+
+  .enter>*:nth-child(3) {
+    --stagger: 3;
+  }
+
+  .enter>*:nth-child(4) {
+    --stagger: 4;
+  }
+
+  .enter>*:nth-child(5) {
+    --stagger: 5;
+  }
