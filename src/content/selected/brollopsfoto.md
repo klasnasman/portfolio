@@ -12,4 +12,4 @@ images:
 - ../../assets/images/selected/brollopsfoto02.png
 ---
 
-Jag tar ibland på mig uppdrag som bröllopsfotograf. Den här sidan visar ett urval av de bröllop jag fotat. Samtidigt blev den ett naturligt sätt att kombinera två saker jag tycker om, fotografering och webbutveckling.
+Jag tar ibland på mig uppdrag som bröllopsfotograf. Den här sidan visar ett urval av de bröllop jag fotat.
