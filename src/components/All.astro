@@ -21,17 +21,14 @@ const sortedWorks = allWork.sort((a, b) => {
     <tbody>
       {
         sortedWorks.map((work) => (
-          <>
             <tr class="table__item">
               <td class="td project">
                 <a href={work.data.link}>{work.data.project}</a>
               </td>
               <td class="td type">
-                {" "}
                 <a href={work.data.link}>{work.data.type}</a>
               </td>
               <td class="td tags">
-                {" "}
                 <a href={work.data.link}>
                   {work.data.tags.slice().sort().join(", ")}
                 </a>
@@ -40,7 +37,6 @@ const sortedWorks = allWork.sort((a, b) => {
                 <a href={work.data.link}>{work.data.year}</a>
               </td>
             </tr>
-          </>
         ))
       }
     </tbody>
