@@ -18,4 +18,4 @@ imagesDark:
   - ../../assets/images/selected/upprop.dark03.png
 ---
 
-Att koordinera ett Korpen-lag via gruppchattar är inte hållbart i längden. Upprop är mitt försök att lösa det, matcher synkas automatiskt mot Korpens API, spelarna svarar om dom kan komma eller inte, och allt finns samlat på ett ställe.
+Att koordinera ett Korpen-lag via gruppchattar är inte hållbart i längden. Upprop är mitt försök att lösa det.
