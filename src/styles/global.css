@@ -258,7 +258,7 @@ nav a:hover,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block-start: var(--spacer-xs);
+  margin-block-start: var(--spacer-s);
   margin-block-end: var(--spacer-s);
   text-transform: capitalize;
 }
