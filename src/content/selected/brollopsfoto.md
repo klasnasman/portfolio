@@ -10,6 +10,9 @@ year: 2022
 images: 
 - ../../assets/images/selected/brollopsfoto.png
 - ../../assets/images/selected/brollopsfoto02.png
+imagesDark:
+- ../../assets/images/selected/brollopsfoto.dark.png
+- ../../assets/images/selected/brollopsfoto.dark02.png
 ---
 
 Jag tar ibland på mig uppdrag som bröllopsfotograf. Den här sidan visar ett urval av de bröllop jag fotat.
