@@ -1,0 +1,26 @@
+/*
+WRAPPER:
+A common wrapper for the main content.
+
+- Start at a minimum of 16rem.
+- Scale fluidly up to the viewport width (100vw).
+- Stop growing beyond 68rem.
+*/
+@layer utilities {
+  .wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: calc(var(--header-height) + 4rem);
+    max-width: var(--container-site);
+    width: 100%;
+  }
+
+  .wrapper[data-wrapper-screen] {
+    padding-block: 0rem;
+    padding-inline: 0rem;
+  }
+}

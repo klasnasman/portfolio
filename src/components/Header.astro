@@ -1,5 +1,5 @@
 <header class='header'>
-  <a class='header__logo' href='/'><h1>Klas Näsman</h1></a>
+  <a class='header__logo' href='/'>Klas Näsman</a>
   <nav>
     <div>
       <a href='#about' class='clickable-area'>Om</a>
@@ -13,11 +13,12 @@
 </header>
 
 <script>
-  document.querySelectorAll('header nav a[href^="#"]').forEach((link) => {
+  document.querySelectorAll<HTMLAnchorElement>('header nav a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (e) => {
+      const target = link.hash ? document.querySelector(link.hash) : null;
+      if (!target) return;
       e.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
-      if (target) target.scrollIntoView({ behavior: "smooth" });
+      target.scrollIntoView({ behavior: "smooth" });
     });
   });
 </script>

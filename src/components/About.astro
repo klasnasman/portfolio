@@ -1,10 +1,33 @@
 ---
-import AboutContent from "@content/about.mdx";
+import { Image } from "astro:assets";
+import klas from "@assets/images/about.png";
+import snowboard from "@assets/images/snowboard.gif";
+import elasto from "@assets/images/elasto.gif";
+
+const img = "rounded-sm bevel inline h-[1.5em] w-[2.3em] -my-[0.1em] object-cover align-middle mx-base";
 ---
 
-<section id='about'>
-  <h2 class='visually-hidden'>Om</h2>
-  <span class='about__span enter'>
-    <AboutContent />
-  </span>
+<section id='about' class='info flex flex-col items-center min-h-screen justify-center'>
+  <div class='max-w-[75ch] enter-content'>
+    <h1 class='leading-[1.5] text-center'>
+      <span>Hej, jag heter Klas.</span>
+      <Image src={klas} alt='Klas' width={480} loading='eager' class={img} />
+      <span
+        >Fullstackutvecklare baserad i Stockholm. Jag har alltid varit kreativ, oavsett om det handlat om
+        webbutveckling, snowboard</span
+      >
+      <Image src={snowboard} alt='' width={480} loading='eager' class={img} />
+      <span>
+        <a
+          class='inline-block link-header'
+          href='https://brollop.klasnasman.com/'
+          target='_blank'
+          rel='noopener noreferrer'>
+          fotografering
+        </a>
+      </span>
+      <span> eller möbelsnickeri. Apropå någonting helt annat så hade jag en gång ett världsrekord i Elasto Mania</span>
+      <Image src={elasto} alt='' width={480} loading='eager' class={img} />
+    </h1>
+  </div>
 </section>
